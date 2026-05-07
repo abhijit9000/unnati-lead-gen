@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hashtag Unnati — Join the Waitlist</title>
+<meta name="description" content="India's first brand × NGO collaboration platform for CSR. Join the waitlist — launching soon.">
+<meta property="og:title" content="Hashtag Unnati — Join the Waitlist">
+<meta property="og:description" content="Stop doing CSR alone. Co-create campaigns with brands and NGOs that share your mission.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════
+   DESIGN TOKENS — light & dark
+   ═══════════════════════════════════════ */
+:root {
+  --bg:            #F6F2EB;
+  --bg-2:          #EDE8DF;
+  --bg-card:       #FFFFFF;
+  --bg-card-2:     #F9F6F1;
+  --ink:           #0E0E0D;
+  --ink-2:         #3A3A38;
+  --muted:         #7A746A;
+  --muted-2:       #A09890;
+  --border:        rgba(0,0,0,0.1);
+  --border-2:      rgba(0,0,0,0.06);
+  --saffron:       #E2610A;
+  --saffron-2:     #F07D2E;
+  --saffron-pale:  #FBE9D9;
+  --forest:        #1B3D2B;
+  --forest-2:      #2A5C40;
+  --forest-pale:   #D6EAD9;
+  --forest-bright: #2E7D47;
+  --gold:          #C4973C;
+  --nav-bg:        rgba(246,242,235,0.92);
+  --nav-border:    rgba(0,0,0,0.08);
+  --input-bg:      #FFFFFF;
+  --input-border:  rgba(0,0,0,0.15);
+  --input-color:   #0E0E0D;
+  --logo-color:    #0E0E0D;
+  --shadow-sm:     0 1px 6px rgba(0,0,0,0.07);
+  --shadow-md:     0 4px 20px rgba(0,0,0,0.1);
+  --shadow-lg:     0 12px 48px rgba(0,0,0,0.13);
+  --hero-bg:       #0E0E0D;
+  --hero-text:     #F6F2EB;
+  --hero-muted:    #888;
+  --ticker-bg:     rgba(226,97,10,0.07);
+  --ticker-border: rgba(226,97,10,0.18);
+  --proof-bg:      #FFFFFF;
+  --proof-border:  rgba(0,0,0,0.08);
+  --counter-bg:    #FFFFFF;
+  --counter-border:rgba(226,97,10,0.25);
+  --stat-bg:       rgba(0,0,0,0.03);
+  --footer-bg:     #0E0E0D;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:            #0E0E0D;
+    --bg-2:          #141412;
+    --bg-card:       #1A1A18;
+    --bg-card-2:     #141412;
+    --ink:           #F0EDE6;
+    --ink-2:         #C8C4BC;
+    --muted:         #888;
+    --muted-2:       #555;
+    --border:        rgba(255,255,255,0.09);
+    --border-2:      rgba(255,255,255,0.05);
+    --saffron:       #F07D2E;
+    --saffron-2:     #E2610A;
+    --saffron-pale:  rgba(226,97,10,0.12);
+    --forest-pale:   rgba(27,61,43,0.25);
+    --forest-bright: #4CAF50;
+    --nav-bg:        rgba(14,14,13,0.94);
+    --nav-border:    rgba(255,255,255,0.07);
+    --input-bg:      rgba(255,255,255,0.06);
+    --input-border:  rgba(255,255,255,0.12);
+    --input-color:   #F0EDE6;
+    --logo-color:    #F0EDE6;
+    --shadow-sm:     0 1px 6px rgba(0,0,0,0.3);
+    --shadow-md:     0 4px 24px rgba(0,0,0,0.4);
+    --shadow-lg:     0 12px 48px rgba(0,0,0,0.5);
+    --hero-bg:       #0E0E0D;
+    --hero-text:     #F0EDE6;
+    --hero-muted:    #777;
+    --ticker-bg:     rgba(226,97,10,0.07);
+    --ticker-border: rgba(226,97,10,0.15);
+    --proof-bg:      #1A1A18;
+    --proof-border:  rgba(255,255,255,0.07);
+    --counter-bg:    #1A1A18;
+    --counter-border:rgba(226,97,10,0.3);
+    --stat-bg:       rgba(255,255,255,0.04);
+    --footer-bg:     #070706;
+  }
+}
+
+/* ═══════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ═══════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════ */
+@keyframes fadeUp  { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn  { from{opacity:0} to{opacity:1} }
+@keyframes float   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+@keyframes pulse   { 0%,100%{opacity:0.5;transform:scale(1)} 50%{opacity:1;transform:scale(1.08)} }
+@keyframes ticker  { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+@keyframes grain   { 0%,100%{transform:translate(0,0)} 20%{transform:translate(-2%,-2%)} 60%{transform:translate(2%,1%)} }
+@keyframes shimmer { 0%{opacity:0.4} 50%{opacity:1} 100%{opacity:0.4} }
+
+/* ═══════════════════════════════════════
+   STICKY NAV
+   ═══════════════════════════════════════ */
+.nav {
+  position: fixed; top:0; left:0; right:0; z-index:999;
+  height: 60px; display:flex; align-items:center; padding:0 32px; gap:16px;
+  background: var(--nav-bg); backdrop-filter:blur(20px);
+  border-bottom: 1px solid var(--nav-border);
+  will-change: transform; transform: translateZ(0);
+}
+.nav-logo {
+  display: flex; align-items: center;
+  height: 32px; flex-shrink: 0; cursor: pointer;
+  color: var(--logo-color);
+}
+.nav-logo svg { height:40px; width:auto; }
+.nav-spacer { flex: 1; }
+.nav-count {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--muted); white-space:nowrap;
+}
+.nav-count-num { color:var(--saffron); font-weight:700; font-family:'DM Mono',monospace; }
+.live-dot { width:6px; height:6px; border-radius:50%; background:#4CAF50; flex-shrink:0; animation:pulse 2s infinite; }
+.nav-btn {
+  background: var(--saffron); color:#fff; border:none; border-radius:5px;
+  padding:8px 18px; font-size:13px; font-weight:600; cursor:pointer;
+  font-family:'DM Sans',sans-serif; white-space:nowrap; flex-shrink:0;
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-btn:hover { background:#cc5608; transform:translateY(-1px); }
+.nav-theme {
+  background:none; border:1px solid var(--border); border-radius:5px;
+  padding:7px 10px; cursor:pointer; color:var(--muted); font-size:14px; flex-shrink:0;
+  transition:all 0.2s;
+}
+.nav-theme:hover { background:var(--bg-2); color:var(--ink); }
+
+/* ═══════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════ */
+.hero {
+  min-height: 100vh; display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  padding: 100px 24px 80px; position:relative; overflow:hidden;
+  text-align:center;
+  background: var(--hero-bg);
+}
+.hero-grain {
+  position:absolute; inset:-50%; width:200%; height:200%;
+  opacity:0.03; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 8s steps(1) infinite;
+}
+.hero-glow-a { position:absolute; top:-150px; left:50%; transform:translateX(-50%); width:min(800px,100vw); height:600px; background:radial-gradient(circle, rgba(226,97,10,0.13) 0%, transparent 65%); pointer-events:none; }
+.hero-glow-b { position:absolute; bottom:-100px; left:-50px; width:min(500px,80vw); height:500px; background:radial-gradient(circle, rgba(27,61,43,0.18) 0%, transparent 65%); pointer-events:none; }
+.hero-glow-c { position:absolute; bottom:-50px; right:-50px; width:min(400px,60vw); height:400px; background:radial-gradient(circle, rgba(196,151,60,0.07) 0%, transparent 65%); pointer-events:none; }
+
+.hero-orb { position:absolute; border-radius:50%; pointer-events:none; animation:float var(--dur,6s) ease-in-out infinite; animation-delay:var(--dl,0s); }
+.orb-1 { width:clamp(40px,8vw,80px); height:clamp(40px,8vw,80px); background:rgba(226,97,10,0.06); border:1px solid rgba(226,97,10,0.15); top:18%; left:6%; --dur:7s; }
+.orb-2 { width:clamp(60px,10vw,110px); height:clamp(60px,10vw,110px); background:rgba(27,61,43,0.08); border:1px solid rgba(27,61,43,0.2); top:22%; right:8%; --dur:9s; --dl:1s; }
+.orb-3 { width:clamp(30px,5vw,55px); height:clamp(30px,5vw,55px); background:rgba(196,151,60,0.07); border:1px solid rgba(196,151,60,0.18); bottom:28%; left:10%; --dur:8s; --dl:2s; }
+.orb-4 { width:clamp(40px,7vw,80px); height:clamp(40px,7vw,80px); background:rgba(226,97,10,0.04); border:1px solid rgba(226,97,10,0.1); bottom:22%; right:9%; --dur:11s; --dl:0.5s; }
+
+.hero-eyebrow {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(226,97,10,0.1); border:1px solid rgba(226,97,10,0.25);
+  border-radius:20px; padding:5px 14px;
+  font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+  color:var(--saffron); margin-bottom:24px;
+  animation:fadeUp 0.6s both;
+}
+
+.hero-headline {
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size: clamp(44px, 8vw, 96px);
+  font-weight:700; line-height:0.95; letter-spacing:-2px;
+  color:var(--hero-text); max-width:860px;
+  animation:fadeUp 0.6s 0.1s both;
+}
+.hero-headline em { color:var(--saffron); font-style:italic; }
+
+.hero-sub {
+  font-size:clamp(15px,2vw,18px); color:var(--hero-muted); line-height:1.7;
+  max-width:520px; margin:20px auto 0; font-weight:300;
+  animation:fadeUp 0.6s 0.2s both;
+}
+
+/* ═══════════════════════════════════════
+   DUAL WAITLIST FORM
+   ═══════════════════════════════════════ */
+.waitlist-wrap {
+  margin-top:44px; width:100%; max-width:800px;
+  animation:fadeUp 0.6s 0.3s both;
+}
+.wtabs {
+  display:grid; grid-template-columns:1fr 1fr;
+  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
+  border-radius:10px 10px 0 0; overflow:hidden;
+}
+.wtab {
+  padding:14px 16px; border:none; background:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  transition:all 0.2s; border-bottom:2px solid transparent;
+  font-family:'DM Sans',sans-serif;
+}
+.wtab-icon { font-size:18px; }
+.wtab-main { font-size:14px; font-weight:600; color:#aaa; }
+.wtab-sub  { font-size:11px; color:#666; display:block; margin-top:1px; }
+.wtab.brand-active { background:rgba(226,97,10,0.1); border-bottom-color:var(--saffron); }
+.wtab.brand-active .wtab-main { color:#F6F2EB; }
+.wtab.ngo-active   { background:rgba(27,61,43,0.25); border-bottom-color:#4CAF50; }
+.wtab.ngo-active   .wtab-main { color:#F6F2EB; }
+
+.wform-box {
+  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
+  border-top:none; border-radius:0 0 10px 10px; padding:24px;
+}
+.wform { display:none; }
+.wform.show { display:block; animation:fadeIn 0.25s both; }
+.wform-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px; }
+.wi {
+  background:var(--input-bg); border:1.5px solid var(--input-border);
+  border-radius:6px; padding:11px 14px; font-size:14px; color:var(--input-color);
+  font-family:'DM Sans',sans-serif; outline:none; width:100%;
+  transition:border-color 0.2s, box-shadow 0.2s;
+}
+.wi::placeholder { color:#555; }
+.wi:focus { border-color:var(--saffron); box-shadow:0 0 0 3px rgba(226,97,10,0.12); }
+.wi.ngo:focus { border-color:#4CAF50; box-shadow:0 0 0 3px rgba(76,175,80,0.12); }
+select.wi { appearance:none; cursor:pointer; color-scheme:light; }
+select.wi option { background:#fff; color:#0E0E0D; }
+select.wi option:disabled { color:#6B7280; }
+select.wi option:checked { background:#2563EB; color:#fff; }
+.wform-row { display:flex; gap:10px; }
+.wform-row .wi { flex:1; min-width:0; }
+.wsub-brand {
+  background:var(--saffron); color:#fff; border:none; border-radius:6px;
+  padding:11px 22px; font-size:14px; font-weight:700; cursor:pointer;
+  white-space:nowrap; font-family:'DM Sans',sans-serif;
+  transition:background 0.2s, transform 0.2s; flex-shrink:0;
+}
+.wsub-brand:hover { background:#cc5608; transform:translateY(-1px); }
+.wsub-ngo {
+  background:var(--forest-2); color:#fff; border:none; border-radius:6px;
+  padding:11px 22px; font-size:14px; font-weight:700; cursor:pointer;
+  white-space:nowrap; font-family:'DM Sans',sans-serif;
+  transition:background 0.2s, transform 0.2s; flex-shrink:0;
+}
+.wsub-ngo:hover { background:var(--forest); transform:translateY(-1px); }
+.wsub-brand:disabled,
+.wsub-ngo:disabled { opacity:0.65; cursor:progress; transform:none; }
+.wpromise { font-size:11px; color:#555; text-align:center; margin-top:10px; }
+.wpromise.ngo { color:#4a8; }
+
+/* Success */
+.wsuccess { display:none; text-align:center; padding:28px 16px; animation:fadeUp 0.4s both; }
+.wsuccess-icon  { font-size:44px; margin-bottom:10px; }
+.wsuccess-title { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:700; color:var(--hero-text); margin-bottom:8px; }
+.wsuccess-sub   { font-size:13px; color:#888; line-height:1.7; }
+.wsuccess-badge { display:inline-flex; align-items:center; gap:6px; margin-top:12px; background:rgba(255,255,255,0.07); border-radius:20px; padding:5px 14px; font-size:12px; font-family:'DM Mono',monospace; color:var(--saffron); }
+
+/* Perks */
+.perks {
+  display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:0;
+  margin-top:18px; animation:fadeUp 0.6s 0.4s both;
+}
+.perk { display:flex; align-items:center; gap:5px; font-size:11px; color:#666; padding:4px 14px; border-right:1px solid rgba(255,255,255,0.07); }
+.perk:last-child { border-right:none; }
+.perk strong { color:#999; }
+
+/* ═══════════════════════════════════════
+   MAIN CONTENT — adapts to light/dark
+   ═══════════════════════════════════════ */
+.main { background:var(--bg); color:var(--ink); }
+
+/* ═══════════════════════════════════════
+   TICKER
+   ═══════════════════════════════════════ */
+.ticker-wrap {
+  background:var(--ticker-bg); border-top:1px solid var(--ticker-border);
+  border-bottom:1px solid var(--ticker-border);
+  padding:11px 0; overflow:hidden; white-space:nowrap;
+}
+.ticker-inner { display:inline-flex; animation:ticker 30s linear infinite; }
+.ticker-item { display:inline-flex; align-items:center; gap:7px; padding:0 28px; font-size:12px; color:var(--muted); }
+.ticker-item strong { color:var(--ink); }
+.ticker-sep { color:var(--saffron); font-size:10px; }
+
+/* ═══════════════════════════════════════
+   SECTIONS
+   ═══════════════════════════════════════ */
+.section { padding:clamp(60px,8vw,100px) clamp(20px,5vw,48px); }
+.section-eyebrow { font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--saffron); margin-bottom:12px; }
+.section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(30px,4vw,50px); font-weight:700; line-height:1.05; margin-bottom:14px; }
+.section-sub { font-size:clamp(14px,2vw,16px); color:var(--muted); max-width:500px; margin:0 auto 56px; line-height:1.7; }
+
+/* Stats */
+.stats-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--border); border-radius:12px; overflow:hidden;
+  max-width:880px; margin:0 auto;
+}
+.stat-block { background:var(--bg-card); padding:clamp(20px,3vw,36px) clamp(16px,2vw,28px); text-align:center; }
+.stat-num {
+  font-family:'Cormorant Garamond',serif; font-size:clamp(36px,5vw,50px); font-weight:700; line-height:1;
+  background:linear-gradient(135deg, var(--ink), var(--muted));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.stat-num.s { background:linear-gradient(135deg, var(--saffron), var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.stat-num.f { background:linear-gradient(135deg, var(--forest-bright), var(--forest-2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.stat-label { font-size:12px; color:var(--muted); margin-top:8px; line-height:1.5; }
+
+/* Value dual column */
+.value-grid { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border); border-radius:16px; overflow:hidden; max-width:1080px; margin:0 auto; }
+.vcol { padding:clamp(32px,4vw,52px) clamp(24px,3vw,44px); }
+.vcol.brand { background:var(--bg-card); border-right:1px solid var(--border); }
+.vcol.ngo   { background:var(--bg-card); }
+.vtag { display:inline-flex; align-items:center; gap:5px; border-radius:20px; padding:4px 12px; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:18px; }
+.vtag.brand { background:var(--saffron-pale); border:1px solid rgba(226,97,10,0.3); color:var(--saffron); }
+.vtag.ngo   { background:var(--forest-pale); border:1px solid rgba(27,61,43,0.3); color:var(--forest-bright); }
+.vhead { font-family:'Cormorant Garamond',serif; font-size:clamp(26px,3vw,36px); font-weight:700; line-height:1.1; margin-bottom:14px; }
+.vdesc { font-size:14px; color:var(--muted); line-height:1.75; margin-bottom:28px; }
+.vpoints { display:flex; flex-direction:column; gap:14px; }
+.vpoint { display:flex; align-items:flex-start; gap:10px; }
+.vp-icon { font-size:16px; flex-shrink:0; margin-top:2px; }
+.vp-text { font-size:13px; color:var(--muted); line-height:1.6; }
+.vp-text strong { color:var(--ink); font-weight:600; }
+.vcta { margin-top:32px; }
+.btn-brand { background:var(--saffron); color:#fff; border:none; border-radius:6px; padding:12px 24px; font-size:13px; font-weight:700; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.2s; }
+.btn-brand:hover { background:#cc5608; transform:translateY(-1px); box-shadow:0 6px 20px rgba(226,97,10,0.3); }
+.btn-ngo   { background:var(--forest-2); color:#fff; border:none; border-radius:6px; padding:12px 24px; font-size:13px; font-weight:700; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.2s; }
+.btn-ngo:hover   { background:var(--forest); transform:translateY(-1px); box-shadow:0 6px 20px rgba(27,61,43,0.35); }
+
+/* Steps */
+.steps-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border-radius:12px; overflow:hidden; max-width:960px; margin:0 auto; }
+.step-card { background:var(--bg-card); padding:clamp(20px,3vw,32px) clamp(16px,2vw,24px); text-align:center; }
+.step-num  { font-family:'Cormorant Garamond',serif; font-size:56px; font-weight:700; color:var(--saffron); opacity:0.13; line-height:1; margin-bottom:-8px; }
+.step-icon { font-size:26px; margin-bottom:12px; }
+.step-title{ font-size:15px; font-weight:700; margin-bottom:8px; }
+.step-desc { font-size:12px; color:var(--muted); line-height:1.6; }
+
+/* Testimonials */
+.proof-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:960px; margin:0 auto; }
+.proof-card { background:var(--proof-bg); border:1px solid var(--proof-border); border-radius:12px; padding:22px; box-shadow:var(--shadow-sm); transition:box-shadow 0.2s; }
+.proof-card:hover { box-shadow:var(--shadow-md); }
+.proof-q { font-size:14px; color:var(--muted); line-height:1.75; margin-bottom:18px; font-style:italic; }
+.proof-q::before { content:'"'; font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--saffron); line-height:0; vertical-align:-10px; margin-right:3px; }
+.proof-auth { display:flex; align-items:center; gap:10px; }
+.proof-av   { width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; }
+.proof-name { font-size:13px; font-weight:600; }
+.proof-role { font-size:11px; color:var(--muted); }
+
+/* Counter */
+.counter-section { text-align:center; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.counter-wrap {
+  max-width:640px; margin:0 auto;
+  background:var(--counter-bg); border:1px solid var(--counter-border);
+  border-radius:16px; padding:clamp(32px,5vw,52px); position:relative; overflow:hidden;
+  box-shadow:var(--shadow-md);
+}
+.counter-wrap::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--saffron),transparent); }
+.counter-num {
+  font-family:'Cormorant Garamond',serif; font-size:clamp(56px,10vw,80px); font-weight:700; line-height:1;
+  background:linear-gradient(135deg, var(--saffron), var(--gold));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  margin-bottom:6px;
+}
+.counter-label { font-size:clamp(14px,2vw,18px); color:var(--muted); margin-bottom:24px; }
+.counter-bar-track { background:var(--bg-2); border-radius:4px; height:7px; max-width:380px; margin:0 auto 12px; overflow:hidden; }
+.counter-bar-fill  { height:100%; background:linear-gradient(90deg, var(--saffron), var(--gold)); border-radius:4px; width:0; transition:width 2s ease; }
+.counter-sub { font-size:12px; color:var(--muted); }
+.counter-avs { display:flex; justify-content:center; margin:16px 0 6px; }
+.cav { width:36px; height:36px; border-radius:50%; border:2px solid var(--bg-card); background:var(--bg-2); display:flex; align-items:center; justify-content:center; font-size:15px; margin-left:-8px; }
+.cav:first-child { margin-left:0; }
+.counter-btns { display:flex; gap:12px; justify-content:center; margin-top:20px; flex-wrap:wrap; }
+
+/* Bottom CTA */
+.bottom-cta {
+  text-align:center; position:relative; overflow:hidden;
+  background:var(--hero-bg); color:var(--hero-text);
+}
+.bottom-cta::before { content:''; position:absolute; top:-150px; left:50%; transform:translateX(-50%); width:min(700px,100vw); height:600px; background:radial-gradient(circle, rgba(226,97,10,0.08) 0%, transparent 65%); pointer-events:none; }
+.bottom-headline { font-family:'Cormorant Garamond',serif; font-size:clamp(36px,6vw,72px); font-weight:700; line-height:1.0; margin-bottom:14px; }
+.bottom-sub { font-size:clamp(14px,2vw,16px); color:#666; max-width:460px; margin:0 auto 40px; line-height:1.7; }
+.bottom-actions { display:flex; gap:12px; max-width:460px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+.bottom-actions .btn-brand,
+.bottom-actions .btn-ngo { min-width:150px; }
+.bottom-note { font-size:11px; color:#444; margin-top:12px; }
+
+/* Footer */
+.footer { padding:28px clamp(20px,5vw,40px); border-top:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; background:var(--footer-bg); }
+.footer-logo { height:32px; display:flex; align-items:center; color:#555; }
+.footer-logo svg { height:24px; width:auto; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-link { font-size:12px; color:#444; cursor:pointer; transition:color 0.15s; }
+.footer-link:hover { color:#888; }
+.footer-copy { font-size:12px; color:#333; }
+
+/* Toast */
+.toast-container { position:fixed; bottom:20px; right:20px; z-index:1000; display:flex; flex-direction:column; gap:8px; }
+.toast {
+  background:var(--bg-card); color:var(--ink); padding:12px 16px; border-radius:10px;
+  font-size:13px; font-weight:500; display:flex; align-items:center; gap:10px;
+  box-shadow:var(--shadow-lg); max-width:320px;
+  transform:translateX(120px); opacity:0;
+  transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  border-left:3px solid var(--saffron); font-family:'DM Sans',sans-serif;
+}
+.toast.show { transform:translateX(0); opacity:1; }
+.toast.ok   { border-left-color:#4CAF50; }
+
+/* ═══════════════════════════════════════
+   MOBILE RESPONSIVE
+   ═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .nav { padding:0 16px; gap:8px; }
+  .nav-count { display:none; }
+  .hero { padding:88px 16px 64px; }
+  .hero-headline { letter-spacing:-1px; }
+  .hero-orb { display:none; }
+  .wtabs { grid-template-columns:1fr 1fr; }
+  .wtab { padding:10px 8px; flex-direction:column; gap:4px; }
+  .wtab-sub { display:none; }
+  .wform-grid { grid-template-columns:1fr; }
+  .wform-row { flex-direction:column; }
+  .wsub-brand, .wsub-ngo { width:100%; text-align:center; }
+  .perks { gap:4px; }
+  .perk { padding:3px 8px; font-size:10px; }
+  .stats-grid { grid-template-columns:1fr 1fr; }
+  .value-grid { grid-template-columns:1fr; }
+  .vcol.brand { border-right:none; border-bottom:1px solid var(--border); }
+  .steps-grid { grid-template-columns:1fr 1fr; }
+  .proof-grid { grid-template-columns:1fr; }
+  .bottom-actions { flex-direction:column; align-items:stretch; max-width:320px; }
+  .bottom-actions .btn-brand,
+  .bottom-actions .btn-ngo { width:100%; }
+  .footer { flex-direction:column; text-align:center; gap:10px; }
+  .footer-links { justify-content:center; }
+}
+@media (max-width: 480px) {
+  .nav { height:52px; }
+  .hero { padding-top:72px; }
+  .steps-grid { grid-template-columns:1fr; }
+  .stats-grid { grid-template-columns:1fr 1fr; }
+  .wform-box { padding:16px; }
+  .wtabs { border-radius:8px 8px 0 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="nav">
+  <div class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg style="display:block;height:40px;width:auto;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" zoomAndPan="magnify" viewBox="44 46 162 36" height="100%" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/><clipPath id="c947c2f258"><rect x="0" width="155" y="0" height="30"/></clipPath><clipPath id="9c495101b9"><path d="M 193.753906 56.269531 L 204.335938 56.269531 L 204.335938 66.855469 L 193.753906 66.855469 Z M 193.753906 56.269531 " clip-rule="nonzero"/></clipPath><clipPath id="18dbc91974"><path d="M 199.046875 56.269531 C 196.121094 56.269531 193.753906 58.640625 193.753906 61.5625 C 193.753906 64.484375 196.121094 66.855469 199.046875 66.855469 C 201.96875 66.855469 204.335938 64.484375 204.335938 61.5625 C 204.335938 58.640625 201.96875 56.269531 199.046875 56.269531 Z M 199.046875 56.269531 " clip-rule="nonzero"/></clipPath><clipPath id="56b8a888be"><path d="M 0.753906 0.269531 L 11.335938 0.269531 L 11.335938 10.855469 L 0.753906 10.855469 Z M 0.753906 0.269531 " clip-rule="nonzero"/></clipPath><clipPath id="ced81f420d"><path d="M 6.046875 0.269531 C 3.121094 0.269531 0.753906 2.640625 0.753906 5.5625 C 0.753906 8.484375 3.121094 10.855469 6.046875 10.855469 C 8.96875 10.855469 11.335938 8.484375 11.335938 5.5625 C 11.335938 2.640625 8.96875 0.269531 6.046875 0.269531 Z M 6.046875 0.269531 " clip-rule="nonzero"/></clipPath><clipPath id="d2eed9ebbc"><rect x="0" width="12" y="0" height="11"/></clipPath></defs><g transform="matrix(1, 0, 0, 1, 47, 59)"><g clip-path="url(#c947c2f258)"><g fill="currentColor"><g transform="translate(4.497476, 21.421828)"><g><path d="M 12.59375 -11.0625 L 3.34375 -11.0625 L 3.34375 -7.609375 C 4.175781 -8.523438 4.945312 -9.113281 5.65625 -9.375 C 6.050781 -9.519531 6.5 -9.59375 7 -9.59375 C 8.863281 -9.59375 10.257812 -8.671875 11.1875 -6.828125 C 11.582031 -6.023438 11.78125 -5.234375 11.78125 -4.453125 C 11.78125 -3.035156 11.195312 -1.753906 10.03125 -0.609375 C 9.644531 -0.222656 9.351562 0.0390625 9.15625 0.1875 L 7.28125 -0.9375 C 7.757812 -1.4375 8.296875 -2.050781 8.890625 -2.78125 C 9.578125 -3.59375 9.925781 -4.625 9.9375 -5.875 C 9.9375 -6.613281 9.765625 -7.234375 9.421875 -7.734375 C 9.035156 -8.304688 8.488281 -8.585938 7.78125 -8.578125 C 7.113281 -8.554688 6.410156 -8.304688 5.671875 -7.828125 C 4.992188 -7.398438 4.429688 -6.890625 3.984375 -6.296875 C 3.503906 -5.648438 3.265625 -5.03125 3.265625 -4.4375 L 3.265625 0.109375 L 1.125 -1.03125 L 1.125 -11.0625 L -0.140625 -11.0625 L -0.140625 -12.4375 L 1.125 -12.4375 C 1.125 -14.6875 0.539062 -16.609375 -0.625 -18.203125 C -1.332031 -19.148438 -1.984375 -19.820312 -2.578125 -20.21875 L -0.265625 -20.234375 C 1.015625 -19.535156 2.035156 -18.019531 2.796875 -15.6875 C 3.160156 -14.582031 3.34375 -13.5 3.34375 -12.4375 L 12.59375 -12.4375 Z M 12.59375 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(16.964861, 21.421828)"><g><path d="M 11.203125 -11.0625 L 3.5625 -11.0625 L 3.5625 -9.234375 C 3.59375 -9.234375 3.625 -9.21875 3.65625 -9.1875 C 3.6875 -9.15625 3.710938 -9.140625 3.734375 -9.140625 C 3.671875 -9.140625 3.640625 -9.144531 3.640625 -9.15625 C 3.640625 -9.1875 4.207031 -9.304688 5.34375 -9.515625 C 5.757812 -9.585938 6.175781 -9.625 6.59375 -9.625 C 8.3125 -9.625 9.414062 -9.144531 9.90625 -8.1875 C 10.238281 -7.539062 10.40625 -6.242188 10.40625 -4.296875 L 10.40625 0.109375 C 10.238281 0.046875 9.628906 -0.195312 8.578125 -0.625 C 8.578125 -0.875 8.523438 -1.03125 8.421875 -1.09375 C 8.023438 -0.863281 7.695312 -0.6875 7.4375 -0.5625 C 6.601562 -0.175781 5.640625 0.015625 4.546875 0.015625 C 3.046875 0.015625 1.882812 -0.457031 1.0625 -1.40625 C 0.664062 -1.863281 0.46875 -2.375 0.46875 -2.9375 C 0.46875 -3.570312 0.78125 -4.203125 1.40625 -4.828125 C 2.625 -6.046875 4.132812 -6.65625 5.9375 -6.65625 C 7.03125 -6.65625 7.910156 -6.398438 8.578125 -5.890625 L 8.578125 -6.953125 C 8.242188 -7.378906 7.914062 -7.664062 7.59375 -7.8125 C 7.28125 -7.957031 6.847656 -8.019531 6.296875 -8 C 5.066406 -7.976562 3.9375 -7.753906 2.90625 -7.328125 C 2.445312 -7.140625 2.003906 -6.96875 1.578125 -6.8125 L 1.578125 -7.65625 C 1.671875 -7.738281 1.8125 -7.863281 2 -8.03125 C 2.03125 -8.070312 2.050781 -8.097656 2.0625 -8.109375 L 2.0625 -11.0625 L -0.28125 -11.0625 L -0.28125 -12.4375 L 11.203125 -12.4375 Z M 8.578125 -3.8125 C 8.578125 -4.144531 8.175781 -4.445312 7.375 -4.71875 C 6.707031 -4.9375 6.148438 -5.046875 5.703125 -5.046875 C 4.097656 -5.046875 2.804688 -4.460938 1.828125 -3.296875 C 1.441406 -2.835938 1.25 -2.457031 1.25 -2.15625 C 1.40625 -1.59375 2.035156 -1.3125 3.140625 -1.3125 C 4.566406 -1.3125 5.867188 -1.671875 7.046875 -2.390625 C 8.066406 -3.003906 8.578125 -3.476562 8.578125 -3.8125 Z M 8.578125 -3.8125 "/></g></g></g><g fill="currentColor"><g transform="translate(28.124719, 21.421828)"><g><path d="M 11.65625 -11.0625 L 10.40625 -11.0625 L 10.40625 -6.71875 C 9.945312 -6.988281 9.296875 -7.21875 8.453125 -7.40625 C 7.660156 -7.59375 6.972656 -7.6875 6.390625 -7.6875 C 4.984375 -7.6875 3.804688 -7.4375 2.859375 -6.9375 C 2.328125 -6.65625 2.0625 -6.285156 2.0625 -5.828125 C 2.0625 -5.210938 2.382812 -4.90625 3.03125 -4.90625 C 3.414062 -4.90625 3.921875 -5.019531 4.546875 -5.25 C 4.953125 -5.394531 5.472656 -5.578125 6.109375 -5.796875 C 6.378906 -5.890625 6.851562 -5.9375 7.53125 -5.9375 C 8.851562 -5.9375 9.84375 -5.53125 10.5 -4.71875 C 10.8125 -4.320312 10.96875 -3.863281 10.96875 -3.34375 C 10.96875 -2.125 10.203125 -1.164062 8.671875 -0.46875 C 8.035156 -0.175781 7.429688 -0.015625 6.859375 0.015625 C 7.410156 0.566406 7.929688 0.84375 8.421875 0.84375 C 8.585938 0.84375 8.757812 0.820312 8.9375 0.78125 L 10.109375 2.671875 C 9.867188 2.878906 9.378906 2.984375 8.640625 2.984375 C 8.046875 2.984375 7.539062 2.78125 7.125 2.375 C 6.90625 2.15625 6.59375 1.691406 6.1875 0.984375 C 5.84375 0.378906 5.554688 0.0703125 5.328125 0.0625 C 3.910156 0.03125 2.820312 -0.222656 2.0625 -0.703125 C 1.582031 -0.992188 1.34375 -1.398438 1.34375 -1.921875 C 1.34375 -2.566406 1.722656 -2.890625 2.484375 -2.890625 C 2.765625 -2.890625 3.351562 -2.671875 4.25 -2.234375 C 5.15625 -1.796875 5.898438 -1.578125 6.484375 -1.578125 C 7.640625 -1.578125 8.726562 -1.847656 9.75 -2.390625 C 10.25 -2.660156 10.5 -2.988281 10.5 -3.375 C 10.5 -3.957031 10.035156 -4.25 9.109375 -4.25 C 8.828125 -4.25 7.914062 -4.046875 6.375 -3.640625 C 5.46875 -3.390625 4.910156 -3.265625 4.703125 -3.265625 C 3.484375 -3.265625 2.484375 -3.835938 1.703125 -4.984375 C 1.316406 -5.535156 1.125 -6.128906 1.125 -6.765625 C 1.113281 -8.054688 1.992188 -8.925781 3.765625 -9.375 C 4.492188 -9.5625 5.179688 -9.65625 5.828125 -9.65625 C 6.554688 -9.65625 7.59375 -9.472656 8.9375 -9.109375 L 8.9375 -11.0625 L -0.1875 -11.0625 L -0.1875 -12.4375 L 11.65625 -12.4375 Z M 11.65625 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(39.663072, 21.421828)"><g><path d="M 12.59375 -11.0625 L 3.34375 -11.0625 L 3.34375 -7.609375 C 4.175781 -8.523438 4.945312 -9.113281 5.65625 -9.375 C 6.050781 -9.519531 6.5 -9.59375 7 -9.59375 C 8.863281 -9.59375 10.257812 -8.671875 11.1875 -6.828125 C 11.582031 -6.023438 11.78125 -5.234375 11.78125 -4.453125 C 11.78125 -3.035156 11.195312 -1.753906 10.03125 -0.609375 C 9.644531 -0.222656 9.351562 0.0390625 9.15625 0.1875 L 7.28125 -0.9375 C 7.757812 -1.4375 8.296875 -2.050781 8.890625 -2.78125 C 9.578125 -3.59375 9.925781 -4.625 9.9375 -5.875 C 9.9375 -6.613281 9.765625 -7.234375 9.421875 -7.734375 C 9.035156 -8.304688 8.488281 -8.585938 7.78125 -8.578125 C 7.113281 -8.554688 6.410156 -8.304688 5.671875 -7.828125 C 4.992188 -7.398438 4.429688 -6.890625 3.984375 -6.296875 C 3.503906 -5.648438 3.265625 -5.03125 3.265625 -4.4375 L 3.265625 0.109375 L 1.125 -1.03125 L 1.125 -11.0625 L -0.140625 -11.0625 L -0.140625 -12.4375 L 1.125 -12.4375 C 1.125 -14.6875 0.539062 -16.609375 -0.625 -18.203125 C -1.332031 -19.148438 -1.984375 -19.820312 -2.578125 -20.21875 L -0.265625 -20.234375 C 1.015625 -19.535156 2.035156 -18.019531 2.796875 -15.6875 C 3.160156 -14.582031 3.34375 -13.5 3.34375 -12.4375 L 12.59375 -12.4375 Z M 12.59375 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(52.130457, 21.421828)"><g><path d="M 10.140625 -11.0625 L 4.34375 -11.0625 L 4.34375 -1.828125 C 4.34375 -1.566406 4.425781 -1.316406 4.59375 -1.078125 C 4.769531 -0.804688 4.984375 -0.671875 5.234375 -0.671875 C 6.378906 -0.671875 6.953125 -1.847656 6.953125 -4.203125 L 9.25 -2.890625 C 8.375 -0.941406 7.015625 0.0234375 5.171875 0.015625 C 4.097656 0.015625 3.265625 -0.46875 2.671875 -1.4375 C 2.410156 -1.863281 2.28125 -2.285156 2.28125 -2.703125 L 2.28125 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 2.28125 -12.4375 L 2.28125 -16.296875 L 4.34375 -14.859375 L 4.34375 -12.4375 L 10.140625 -12.4375 Z M 10.140625 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(62.131892, 21.421828)"><g><path d="M 11.203125 -11.0625 L 3.5625 -11.0625 L 3.5625 -9.234375 C 3.59375 -9.234375 3.625 -9.21875 3.65625 -9.1875 C 3.6875 -9.15625 3.710938 -9.140625 3.734375 -9.140625 C 3.671875 -9.140625 3.640625 -9.144531 3.640625 -9.15625 C 3.640625 -9.1875 4.207031 -9.304688 5.34375 -9.515625 C 5.757812 -9.585938 6.175781 -9.625 6.59375 -9.625 C 8.3125 -9.625 9.414062 -9.144531 9.90625 -8.1875 C 10.238281 -7.539062 10.40625 -6.242188 10.40625 -4.296875 L 10.40625 0.109375 C 10.238281 0.046875 9.628906 -0.195312 8.578125 -0.625 C 8.578125 -0.875 8.523438 -1.03125 8.421875 -1.09375 C 8.023438 -0.863281 7.695312 -0.6875 7.4375 -0.5625 C 6.601562 -0.175781 5.640625 0.015625 4.546875 0.015625 C 3.046875 0.015625 1.882812 -0.457031 1.0625 -1.40625 C 0.664062 -1.863281 0.46875 -2.375 0.46875 -2.9375 C 0.46875 -3.570312 0.78125 -4.203125 1.40625 -4.828125 C 2.625 -6.046875 4.132812 -6.65625 5.9375 -6.65625 C 7.03125 -6.65625 7.910156 -6.398438 8.578125 -5.890625 L 8.578125 -6.953125 C 8.242188 -7.378906 7.914062 -7.664062 7.59375 -7.8125 C 7.28125 -7.957031 6.847656 -8.019531 6.296875 -8 C 5.066406 -7.976562 3.9375 -7.753906 2.90625 -7.328125 C 2.445312 -7.140625 2.003906 -6.96875 1.578125 -6.8125 L 1.578125 -7.65625 C 1.671875 -7.738281 1.8125 -7.863281 2 -8.03125 C 2.03125 -8.070312 2.050781 -8.097656 2.0625 -8.109375 L 2.0625 -11.0625 L -0.28125 -11.0625 L -0.28125 -12.4375 L 11.203125 -12.4375 Z M 8.578125 -3.8125 C 8.578125 -4.144531 8.175781 -4.445312 7.375 -4.71875 C 6.707031 -4.9375 6.148438 -5.046875 5.703125 -5.046875 C 4.097656 -5.046875 2.804688 -4.460938 1.828125 -3.296875 C 1.441406 -2.835938 1.25 -2.457031 1.25 -2.15625 C 1.40625 -1.59375 2.035156 -1.3125 3.140625 -1.3125 C 4.566406 -1.3125 5.867188 -1.671875 7.046875 -2.390625 C 8.066406 -3.003906 8.578125 -3.476562 8.578125 -3.8125 Z M 8.578125 -3.8125 "/></g></g></g><g fill="currentColor"><g transform="translate(73.29175, 21.421828)"><g><path d="M 11.921875 1.859375 C 11.921875 3.273438 11.234375 3.984375 9.859375 3.984375 C 9.242188 3.984375 8.359375 3.695312 7.203125 3.125 C 5.921875 2.476562 4.84375 2.15625 3.96875 2.15625 C 2.09375 2.15625 0.328125 2.894531 -1.328125 4.375 C -2.117188 5.082031 -2.742188 5.914062 -3.203125 6.875 C -3.234375 6.757812 -3.25 6.566406 -3.25 6.296875 C -3.25 5.378906 -2.972656 4.46875 -2.421875 3.5625 C -1.910156 2.71875 -1.253906 2.007812 -0.453125 1.4375 C 0.441406 0.8125 1.46875 0.5 2.625 0.5 C 3.414062 0.5 4.109375 0.628906 4.703125 0.890625 C 5.015625 1.035156 5.617188 1.410156 6.515625 2.015625 C 7.273438 2.535156 7.859375 2.796875 8.265625 2.796875 C 9.273438 2.796875 10.078125 2.378906 10.671875 1.546875 C 10.929688 1.191406 11.0625 0.84375 11.0625 0.5 C 11.0625 -0.101562 10.878906 -0.609375 10.515625 -1.015625 C 10.148438 -1.429688 9.671875 -1.640625 9.078125 -1.640625 C 8.523438 -1.640625 7.613281 -1.363281 6.34375 -0.8125 C 5.082031 -0.257812 4.179688 0.015625 3.640625 0.015625 C 3.234375 0.015625 2.742188 -0.179688 2.171875 -0.578125 C 0.972656 -1.429688 0.375 -2.222656 0.375 -2.953125 C 0.375 -3.359375 0.601562 -3.734375 1.0625 -4.078125 C 1.457031 -4.390625 1.875 -4.5625 2.3125 -4.59375 L 2.328125 -4.71875 L 1.765625 -5.515625 C 1.453125 -5.960938 1.296875 -6.441406 1.296875 -6.953125 C 1.296875 -8.710938 2.734375 -9.59375 5.609375 -9.59375 C 5.691406 -9.601562 5.75 -9.671875 5.78125 -9.796875 L 5.78125 -11.0625 L -0.15625 -11.0625 L -0.15625 -12.4375 L 11.625 -12.4375 L 11.625 -11.0625 L 7.5625 -11.0625 L 7.5625 -9.140625 C 7.5625 -8.773438 7.660156 -8.550781 7.859375 -8.46875 C 7.992188 -8.46875 8.160156 -8.585938 8.359375 -8.828125 L 8.796875 -9.359375 C 8.910156 -9.472656 9.117188 -9.550781 9.421875 -9.59375 C 9.898438 -9.59375 10.359375 -9.316406 10.796875 -8.765625 C 10.992188 -8.503906 11.125 -8.25 11.1875 -8 L 9.96875 -6.625 C 9.957031 -6.976562 9.890625 -7.300781 9.765625 -7.59375 C 9.585938 -7.976562 9.359375 -8.171875 9.078125 -8.171875 C 8.960938 -8.171875 8.832031 -8.117188 8.6875 -8.015625 C 8.539062 -7.921875 8.46875 -7.828125 8.46875 -7.734375 C 8.46875 -7.617188 8.519531 -7.476562 8.625 -7.3125 C 8.738281 -7.125 8.800781 -7.003906 8.8125 -6.953125 C 8.863281 -6.785156 8.890625 -6.566406 8.890625 -6.296875 C 8.890625 -5.265625 8.472656 -4.566406 7.640625 -4.203125 C 7.078125 -3.953125 6.195312 -3.828125 5 -3.828125 C 3.46875 -3.828125 2.425781 -3.488281 1.875 -2.8125 C 1.644531 -2.539062 1.535156 -2.320312 1.546875 -2.15625 C 1.554688 -1.925781 1.671875 -1.722656 1.890625 -1.546875 C 2.109375 -1.378906 2.335938 -1.296875 2.578125 -1.296875 C 3.015625 -1.296875 3.851562 -1.597656 5.09375 -2.203125 C 6.550781 -2.910156 7.726562 -3.273438 8.625 -3.296875 C 9.4375 -3.304688 10.125 -2.941406 10.6875 -2.203125 C 11.132812 -1.609375 11.457031 -0.859375 11.65625 0.046875 C 11.832031 0.847656 11.921875 1.453125 11.921875 1.859375 Z M 7.46875 -7.34375 C 7.46875 -8.269531 6.972656 -8.734375 5.984375 -8.734375 C 5.191406 -8.734375 4.441406 -8.457031 3.734375 -7.90625 C 2.960938 -7.300781 2.578125 -6.613281 2.578125 -5.84375 C 2.578125 -5.425781 2.738281 -5.066406 3.0625 -4.765625 C 3.394531 -4.472656 3.769531 -4.328125 4.1875 -4.328125 C 4.625 -4.316406 5.117188 -4.472656 5.671875 -4.796875 C 6.160156 -5.078125 6.5625 -5.40625 6.875 -5.78125 C 7.269531 -6.238281 7.46875 -6.757812 7.46875 -7.34375 Z M 7.46875 -7.34375 "/></g></g></g><g fill="currentColor"><g transform="translate(84.726877, 21.421828)"><g/></g></g><g fill="currentColor"><g transform="translate(91.035122, 21.421828)"><g><path d="M 12.84375 -11.0625 L 3.25 -11.0625 L 3.25 -3.71875 C 3.25 -3.226562 3.351562 -2.722656 3.5625 -2.203125 C 3.976562 -1.140625 4.671875 -0.609375 5.640625 -0.609375 C 6.953125 -0.609375 7.945312 -1.15625 8.625 -2.25 C 9.15625 -3.09375 9.421875 -3.882812 9.421875 -4.625 L 9.421875 -9.1875 L 11.75 -9.1875 L 11.75 0.578125 C 11.5625 0.472656 11.210938 0.3125 10.703125 0.09375 L 9.390625 -0.5 L 9.390625 -1.40625 C 8.484375 -0.75 7.710938 -0.332031 7.078125 -0.15625 C 6.679688 -0.0507812 6.21875 0 5.6875 0 C 3.988281 0 2.660156 -0.742188 1.703125 -2.234375 C 1.273438 -2.910156 1.0625 -3.648438 1.0625 -4.453125 L 1.0625 -11.0625 L -0.328125 -11.0625 L -0.328125 -12.4375 L 12.84375 -12.4375 Z M 12.84375 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(103.789245, 21.421828)"><g><path d="M 12.21875 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 12.21875 -12.4375 Z M 9.75 -6.03125 C 9.75 -7.863281 8.878906 -8.78125 7.140625 -8.78125 C 5.859375 -8.78125 4.785156 -8.109375 3.921875 -6.765625 C 3.160156 -5.578125 2.78125 -4.304688 2.78125 -2.953125 L 2.78125 0.375 L 0.890625 -0.609375 L 0.890625 -9.234375 L 2.859375 -9.234375 L 2.859375 -7.859375 L 3.890625 -8.640625 C 4.785156 -9.316406 5.738281 -9.65625 6.75 -9.65625 C 8.101562 -9.65625 9.226562 -9.128906 10.125 -8.078125 C 10.96875 -7.078125 11.390625 -5.882812 11.390625 -4.5 C 11.390625 -2.769531 10.65625 -1.101562 9.1875 0.5 L 6.96875 -0.890625 C 7.65625 -1.578125 8.238281 -2.207031 8.71875 -2.78125 C 9.40625 -3.582031 9.75 -4.664062 9.75 -6.03125 Z M 9.75 -6.03125 "/></g></g></g><g fill="currentColor"><g transform="translate(115.820788, 21.421828)"><g><path d="M 12.21875 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 12.21875 -12.4375 Z M 9.75 -6.03125 C 9.75 -7.863281 8.878906 -8.78125 7.140625 -8.78125 C 5.859375 -8.78125 4.785156 -8.109375 3.921875 -6.765625 C 3.160156 -5.578125 2.78125 -4.304688 2.78125 -2.953125 L 2.78125 0.375 L 0.890625 -0.609375 L 0.890625 -9.234375 L 2.859375 -9.234375 L 2.859375 -7.859375 L 3.890625 -8.640625 C 4.785156 -9.316406 5.738281 -9.65625 6.75 -9.65625 C 8.101562 -9.65625 9.226562 -9.128906 10.125 -8.078125 C 10.96875 -7.078125 11.390625 -5.882812 11.390625 -4.5 C 11.390625 -2.769531 10.65625 -1.101562 9.1875 0.5 L 6.96875 -0.890625 C 7.65625 -1.578125 8.238281 -2.207031 8.71875 -2.78125 C 9.40625 -3.582031 9.75 -4.664062 9.75 -6.03125 Z M 9.75 -6.03125 "/></g></g></g><g fill="currentColor"><g transform="translate(127.852331, 21.421828)"><g><path d="M 11.203125 -11.0625 L 3.5625 -11.0625 L 3.5625 -9.234375 C 3.59375 -9.234375 3.625 -9.21875 3.65625 -9.1875 C 3.6875 -9.15625 3.710938 -9.140625 3.734375 -9.140625 C 3.671875 -9.140625 3.640625 -9.144531 3.640625 -9.15625 C 3.640625 -9.1875 4.207031 -9.304688 5.34375 -9.515625 C 5.757812 -9.585938 6.175781 -9.625 6.59375 -9.625 C 8.3125 -9.625 9.414062 -9.144531 9.90625 -8.1875 C 10.238281 -7.539062 10.40625 -6.242188 10.40625 -4.296875 L 10.40625 0.109375 C 10.238281 0.046875 9.628906 -0.195312 8.578125 -0.625 C 8.578125 -0.875 8.523438 -1.03125 8.421875 -1.09375 C 8.023438 -0.863281 7.695312 -0.6875 7.4375 -0.5625 C 6.601562 -0.175781 5.640625 0.015625 4.546875 0.015625 C 3.046875 0.015625 1.882812 -0.457031 1.0625 -1.40625 C 0.664062 -1.863281 0.46875 -2.375 0.46875 -2.9375 C 0.46875 -3.570312 0.78125 -4.203125 1.40625 -4.828125 C 2.625 -6.046875 4.132812 -6.65625 5.9375 -6.65625 C 7.03125 -6.65625 7.910156 -6.398438 8.578125 -5.890625 L 8.578125 -6.953125 C 8.242188 -7.378906 7.914062 -7.664062 7.59375 -7.8125 C 7.28125 -7.957031 6.847656 -8.019531 6.296875 -8 C 5.066406 -7.976562 3.9375 -7.753906 2.90625 -7.328125 C 2.445312 -7.140625 2.003906 -6.96875 1.578125 -6.8125 L 1.578125 -7.65625 C 1.671875 -7.738281 1.8125 -7.863281 2 -8.03125 C 2.03125 -8.070312 2.050781 -8.097656 2.0625 -8.109375 L 2.0625 -11.0625 L -0.28125 -11.0625 L -0.28125 -12.4375 L 11.203125 -12.4375 Z M 8.578125 -3.8125 C 8.578125 -4.144531 8.175781 -4.445312 7.375 -4.71875 C 6.707031 -4.9375 6.148438 -5.046875 5.703125 -5.046875 C 4.097656 -5.046875 2.804688 -4.460938 1.828125 -3.296875 C 1.441406 -2.835938 1.25 -2.457031 1.25 -2.15625 C 1.40625 -1.59375 2.035156 -1.3125 3.140625 -1.3125 C 4.566406 -1.3125 5.867188 -1.671875 7.046875 -2.390625 C 8.066406 -3.003906 8.578125 -3.476562 8.578125 -3.8125 Z M 8.578125 -3.8125 "/></g></g></g><g fill="currentColor"><g transform="translate(139.012189, 21.421828)"><g><path d="M 10.140625 -11.0625 L 4.34375 -11.0625 L 4.34375 -1.828125 C 4.34375 -1.566406 4.425781 -1.316406 4.59375 -1.078125 C 4.769531 -0.804688 4.984375 -0.671875 5.234375 -0.671875 C 6.378906 -0.671875 6.953125 -1.847656 6.953125 -4.203125 L 9.25 -2.890625 C 8.375 -0.941406 7.015625 0.0234375 5.171875 0.015625 C 4.097656 0.015625 3.265625 -0.46875 2.671875 -1.4375 C 2.410156 -1.863281 2.28125 -2.285156 2.28125 -2.703125 L 2.28125 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 2.28125 -12.4375 L 2.28125 -16.296875 L 4.34375 -14.859375 L 4.34375 -12.4375 L 10.140625 -12.4375 Z M 10.140625 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(149.013624, 21.421828)"><g><path d="M 3.875 -13.640625 C 3.84375 -13.609375 3.753906 -13.59375 3.609375 -13.59375 C 3.484375 -13.59375 3.378906 -13.609375 3.296875 -13.640625 L 2.546875 -15.171875 C 2.242188 -15.648438 1.828125 -15.972656 1.296875 -16.140625 C 0.773438 -16.316406 0.453125 -16.507812 0.328125 -16.71875 C 0.210938 -17.070312 -0.00390625 -17.609375 -0.328125 -18.328125 L -0.328125 -18.59375 L 0.109375 -18.59375 C 0.703125 -18.414062 1.179688 -18.242188 1.546875 -18.078125 C 2.148438 -17.816406 2.554688 -17.507812 2.765625 -17.15625 C 2.878906 -16.96875 3.054688 -16.476562 3.296875 -15.6875 C 3.515625 -14.945312 3.703125 -14.429688 3.859375 -14.140625 C 3.867188 -14.003906 3.875 -13.835938 3.875 -13.640625 Z M 4.546875 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 4.546875 -12.4375 Z M 3.25 0.265625 L 1.3125 -0.796875 L 1.3125 -9.65625 L 3.25 -9.65625 Z M 3.25 0.265625 "/></g></g></g></g></g><g clip-path="url(#9c495101b9)"><g clip-path="url(#18dbc91974)"><g transform="matrix(1, 0, 0, 1, 193, 56)"><g clip-path="url(#d2eed9ebbc)"><g clip-path="url(#56b8a888be)"><g clip-path="url(#ced81f420d)"><path fill="#E2610A" d="M 0.753906 0.269531 L 11.335938 0.269531 L 11.335938 10.855469 L 0.753906 10.855469 Z M 0.753906 0.269531 " fill-opacity="1" fill-rule="nonzero"/></g></g></g></g></g></g></svg>
+  </div>
+  <div class="nav-spacer"></div>
+  <div class="nav-count">
+    <div class="live-dot"></div>
+    <span><span class="nav-count-num" id="nav-num">247</span> on waitlist</span>
+  </div>
+  <button class="nav-theme" onclick="toggleTheme()" id="theme-btn" title="Toggle light/dark">🌙</button>
+  <button class="nav-btn" onclick="scrollToWaitlist()">Join Waitlist →</button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-glow-a"></div>
+  <div class="hero-glow-b"></div>
+  <div class="hero-glow-c"></div>
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-orb orb-3"></div>
+  <div class="hero-orb orb-4"></div>
+
+  <div class="hero-eyebrow">
+    <div class="live-dot"></div>
+    Launching in India · 2026
+  </div>
+
+  <h1 class="hero-headline">Stop doing<br>CSR <em>alone.</em></h1>
+
+  <p class="hero-sub">India's first platform where brands co-fund campaigns with NGOs — sharing costs, multiplying reach, and proving impact together.</p>
+
+  <!-- DUAL WAITLIST FORM -->
+  <div class="waitlist-wrap" id="waitlist">
+    <div class="wtabs">
+      <button class="wtab brand-active" id="tab-brand" onclick="setTab('brand')">
+        <span class="wtab-icon">🏢</span>
+        <div><div class="wtab-main">I'm a Brand</div><div class="wtab-sub">Join as CSR partner</div></div>
+      </button>
+      <button class="wtab" id="tab-ngo" onclick="setTab('ngo')">
+        <span class="wtab-icon">🌱</span>
+        <div><div class="wtab-main">I'm an NGO / NPO</div><div class="wtab-sub">Find brand co-funders</div></div>
+      </button>
+    </div>
+    <div class="wform-box">
+
+      <!-- Brand form -->
+      <div class="wform show" id="form-brand">
+        <div class="wform-grid">
+          <input class="wi" placeholder="Your name *" id="b-name">
+          <input class="wi" placeholder="Company / Brand name *" id="b-company">
+          <select class="wi" id="b-industry">
+            <option value="" disabled selected>Industry</option>
+            <option>FMCG — Food & Beverages</option>
+            <option>Healthcare & Pharma</option>
+            <option>Technology</option>
+            <option>Finance & Banking</option>
+            <option>Manufacturing</option>
+            <option>Energy & Utilities</option>
+            <option>Retail & E-commerce</option>
+            <option>Other</option>
+          </select>
+          <select class="wi" id="b-budget">
+            <option value="" disabled selected>Annual CSR budget</option>
+            <option>Under ₹10 Lakhs</option>
+            <option>₹10L – ₹1 Crore</option>
+            <option>₹1Cr – ₹5Cr</option>
+            <option>₹5Cr+</option>
+          </select>
+        </div>
+        <div class="wform-row">
+          <input class="wi" type="email" placeholder="Work email *" id="b-email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Enter a complete email address, for example name@company.com">
+          <button class="wsub-brand" onclick="submitForm('brand')">Get Early Access →</button>
+        </div>
+        <p class="wpromise">🔒 No spam · Early access brands get 3 months free on launch</p>
+      </div>
+      <div class="wsuccess" id="succ-brand">
+        <div class="wsuccess-icon">🎉</div>
+        <div class="wsuccess-title">You're on the list!</div>
+        <div class="wsuccess-sub">Early access brands get <strong>3 months free</strong> on the Brand Partner plan. We'll reach out when we launch.</div>
+        <div class="wsuccess-badge">Position <span id="b-pos">#248</span> on waitlist</div>
+      </div>
+
+      <!-- NGO form -->
+      <div class="wform" id="form-ngo">
+        <div class="wform-grid">
+          <input class="wi ngo" placeholder="Your name *" id="n-name">
+          <input class="wi ngo" placeholder="NGO / NPO name *" id="n-org">
+          <select class="wi ngo" id="n-cause">
+            <option value="" disabled selected>Primary cause area</option>
+            <option>Health & Nutrition</option>
+            <option>Environment & Rivers</option>
+            <option>Education & Skills</option>
+            <option>Rural Development</option>
+            <option>Clean Energy</option>
+            <option>Culture & Arts</option>
+            <option>Women & Child Welfare</option>
+            <option>Other</option>
+          </select>
+          <select class="wi ngo" id="n-geo">
+            <option value="" disabled selected>Primary geography</option>
+            <option>North India</option>
+            <option>South India</option>
+            <option>East India</option>
+            <option>West India</option>
+            <option>Pan India</option>
+          </select>
+        </div>
+        <div class="wform-row">
+          <input class="wi ngo" type="email" placeholder="Organisation email *" id="n-email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Enter a complete email address, for example name@organisation.org">
+          <button class="wsub-ngo" onclick="submitForm('ngo')">Get Early Access →</button>
+        </div>
+        <p class="wpromise ngo">🔒 No spam · Free verification + 6 months free for early NGOs</p>
+      </div>
+      <div class="wsuccess" id="succ-ngo">
+        <div class="wsuccess-icon">🌱</div>
+        <div class="wsuccess-title">Welcome aboard!</div>
+        <div class="wsuccess-sub">Early NGO partners get <strong>free verification</strong> and <strong>6 months free</strong> — no credit card needed.</div>
+        <div class="wsuccess-badge" style="color:#4CAF50;">Position <span id="n-pos">#61</span> on NGO waitlist</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="perks">
+    <div class="perk">⚡ <strong>First 100 brands</strong> free</div>
+    <div class="perk">🤖 <strong>AI matchmaking</strong> day one</div>
+    <div class="perk">🔒 <strong>Escrow-protected</strong> funds</div>
+    <div class="perk">📊 <strong>BRSR-ready</strong> reports</div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-inner">
+      <span class="ticker-item"><span class="ticker-sep">✦</span> An <strong>FMCG brand</strong> from North India just joined the waitlist</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> A <strong>health NGO</strong> from Bihar is seeking brand partners for nutrition camps</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> An <strong>energy company</strong> wants to co-fund clean energy campaigns</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> An <strong>environment NGO</strong> needs co-funders for river restoration in UP</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> An <strong>education foundation</strong> posted a digital literacy campaign — 2 slots open</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> A <strong>beverage brand</strong> allocated ₹8L CSR budget for health campaigns</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> A <strong>finance brand</strong> is looking to co-fund rural development campaigns</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> An <strong>FMCG brand</strong> from North India just joined the waitlist</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> A <strong>health NGO</strong> from Bihar is seeking brand partners for nutrition camps</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> An <strong>energy company</strong> wants to co-fund clean energy campaigns</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> An <strong>environment NGO</strong> needs co-funders for river restoration in UP</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> An <strong>education foundation</strong> posted a digital literacy campaign — 2 slots open</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> A <strong>beverage brand</strong> allocated ₹8L CSR budget for health campaigns</span>
+      <span class="ticker-item"><span class="ticker-sep">✦</span> A <strong>finance brand</strong> is looking to co-fund rural development campaigns</span>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <section class="section" style="text-align:center; border-bottom:1px solid var(--border);">
+    <div class="section-eyebrow">The opportunity</div>
+    <div class="stats-grid" style="margin-top:40px;">
+      <div class="stat-block"><div class="stat-num s">₹25K<span style="font-size:0.55em;">Cr</span></div><div class="stat-label">India's annual CSR spend — mostly wasted in silos</div></div>
+      <div class="stat-block"><div class="stat-num">3.3M</div><div class="stat-label">NGOs in India — fewer than 2% get corporate funding</div></div>
+      <div class="stat-block"><div class="stat-num f">3.2×</div><div class="stat-label">Average reach multiplier when brands collaborate</div></div>
+      <div class="stat-block"><div class="stat-num s">0</div><div class="stat-label">Platforms built for brand × NGO co-creation — until now</div></div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPS -->
+  <section class="section">
+    <div class="value-grid">
+      <div class="vcol brand">
+        <div class="vtag brand">🏢 For Brands & Corporates</div>
+        <h3 class="vhead">Your CSR rupee goes<br>3× further here.</h3>
+        <p class="vdesc">Stop running isolated campaigns. Co-brand with non-competing partners, split costs, and get the ESG data your BRSR report actually needs.</p>
+        <div class="vpoints">
+          <div class="vpoint"><span class="vp-icon">🤖</span><div class="vp-text"><strong>AI matchmaking</strong> scores partners by geography, cause, budget, and track record instantly.</div></div>
+          <div class="vpoint"><span class="vp-icon">🔒</span><div class="vp-text"><strong>Escrow-protected funds</strong> release to NGOs only after milestone verification.</div></div>
+          <div class="vpoint"><span class="vp-icon">📊</span><div class="vp-text"><strong>BRSR-ready ESG reports</strong> auto-generated with SDG tags and beneficiary counts.</div></div>
+          <div class="vpoint"><span class="vp-icon">🤝</span><div class="vp-text"><strong>Co-brand with 2–4 non-competing brands.</strong> Share logistics and press — each gets full visibility.</div></div>
+        </div>
+        <div class="vcta"><button class="btn-brand" onclick="setTab('brand');scrollToWaitlist()">Join as a Brand →</button></div>
+      </div>
+      <div class="vcol ngo">
+        <div class="vtag ngo">🌱 For NGOs & NPOs</div>
+        <h3 class="vhead">Stop chasing<br>CSR budgets.</h3>
+        <p class="vdesc">Post your programme as a discoverable campaign. Let brands come to you — verified, budget-ready, and aligned with your mission.</p>
+        <div class="vpoints">
+          <div class="vpoint"><span class="vp-icon">🏷️</span><div class="vp-text"><strong>Verified NGO badge</strong> (12A, 80G, FCRA) — instantly credible to brand CSR heads.</div></div>
+          <div class="vpoint"><span class="vp-icon">💰</span><div class="vp-text"><strong>Milestone-based escrow</strong> — you receive funds as you deliver, not after chasing.</div></div>
+          <div class="vpoint"><span class="vp-icon">📈</span><div class="vp-text"><strong>Multiple brand co-funders</strong> per campaign — one brief, 3–4 brands, multiplied budget.</div></div>
+          <div class="vpoint"><span class="vp-icon">📋</span><div class="vp-text"><strong>FCRA-compatible reports</strong> auto-generated from campaign data — donor and press ready.</div></div>
+        </div>
+        <div class="vcta"><button class="btn-ngo" onclick="setTab('ngo');scrollToWaitlist()">Join as an NGO →</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" style="text-align:center; border-top:1px solid var(--border);">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">From brief to impact<br>in four steps.</h2>
+    <p class="section-sub">No cold emails. No chasing CSR heads. Post, match, fund, prove.</p>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-num">01</div><div class="step-icon">📋</div><div class="step-title">Post Your Brief</div><div class="step-desc">Brands post CSR intent. NGOs post campaign programmes. Both go live immediately.</div></div>
+      <div class="step-card"><div class="step-num">02</div><div class="step-icon">🤖</div><div class="step-title">AI Matches You</div><div class="step-desc">Claude scores compatibility across geography, cause, budget, and history. Top 5 matches instantly.</div></div>
+      <div class="step-card"><div class="step-num">03</div><div class="step-icon">🔒</div><div class="step-title">Fund via Escrow</div><div class="step-desc">Brands commit funds to milestone-gated escrow. NGOs get paid as they deliver.</div></div>
+      <div class="step-card"><div class="step-num">04</div><div class="step-icon">📊</div><div class="step-title">Prove the Impact</div><div class="step-desc">Auto-generated ESG reports with SDG tags, beneficiary data, and BRSR-ready formatting.</div></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" style="border-top:1px solid var(--border);">
+    <h2 class="section-title" style="text-align:center; margin-bottom:40px;">Why the waitlist is growing.</h2>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-q">We spend ₹40L annually on CSR campaigns nobody talks about. If we could co-brand with two other FMCG brands, we'd triple reach for the same spend.</div>
+        <div class="proof-auth"><div class="proof-av" style="background:var(--saffron-pale);">👤</div><div><div class="proof-name">CSR Head, FMCG Brand</div><div class="proof-role">North India · ₹50Cr+ revenue</div></div></div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-q">We run 30 health camps a year and barely get noticed. A platform where brands discover us instead of the other way around — that changes everything.</div>
+        <div class="proof-auth"><div class="proof-av" style="background:var(--forest-pale);">👤</div><div><div class="proof-name">Founder, Health NGO</div><div class="proof-role">Bihar & UP operations</div></div></div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-q">The BRSR reporting pressure is real. If a platform auto-generates that report as a by-product of the campaign — that's worth paying for alone.</div>
+        <div class="proof-auth"><div class="proof-av" style="background:var(--bg-2);">👤</div><div><div class="proof-name">CFO, Mid-market Brand</div><div class="proof-role">Manufacturing · Listed company</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTER -->
+  <section class="section counter-section" id="counter">
+    <div class="counter-wrap">
+      <div class="counter-num" id="c-num">247</div>
+      <div class="counter-label">brands and NGOs on the waitlist</div>
+      <div class="counter-avs">
+        <div class="cav">🏢</div><div class="cav">🌱</div><div class="cav">🏢</div>
+        <div class="cav">🌱</div><div class="cav">🏢</div><div class="cav">🌱</div>
+        <div class="cav" style="font-size:10px;color:var(--muted);">+241</div>
+      </div>
+      <div class="counter-bar-track"><div class="counter-bar-fill" id="c-bar"></div></div>
+      <div class="counter-sub" id="c-sub">247 of 500 early access spots · <strong style="color:var(--saffron);">253 remaining</strong></div>
+      <div class="counter-btns">
+        <button class="btn-brand" onclick="setTab('brand');scrollToWaitlist()">Join as Brand →</button>
+        <button class="btn-ngo"   onclick="setTab('ngo');scrollToWaitlist()">Join as NGO →</button>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end .main -->
+
+<!-- BOTTOM CTA -->
+<section class="section bottom-cta">
+  <div class="section-eyebrow" style="margin-bottom:14px;">Be first.</div>
+  <div class="bottom-headline">India's CSR<br>deserves better.</div>
+  <div class="bottom-sub">₹25,000 crore. Fragmented. Invisible. Unaccountable. Hashtag Unnati is here to change that.</div>
+  <div class="bottom-actions">
+    <button class="btn-brand" id="bottom-brand-btn" onclick="setTab('brand');scrollToWaitlist()">Join as Brand →</button>
+    <button class="btn-ngo" id="bottom-ngo-btn" onclick="setTab('ngo');scrollToWaitlist()">Join as NGO →</button>
+  </div>
+  <div class="bottom-note">No spam · Early access perks on launch</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">
+    <svg style="display:block;height:32px;width:auto;opacity:0.45;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" zoomAndPan="magnify" viewBox="44 46 162 36" height="100%" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/><clipPath id="c947c2f258"><rect x="0" width="155" y="0" height="30"/></clipPath><clipPath id="9c495101b9"><path d="M 193.753906 56.269531 L 204.335938 56.269531 L 204.335938 66.855469 L 193.753906 66.855469 Z M 193.753906 56.269531 " clip-rule="nonzero"/></clipPath><clipPath id="18dbc91974"><path d="M 199.046875 56.269531 C 196.121094 56.269531 193.753906 58.640625 193.753906 61.5625 C 193.753906 64.484375 196.121094 66.855469 199.046875 66.855469 C 201.96875 66.855469 204.335938 64.484375 204.335938 61.5625 C 204.335938 58.640625 201.96875 56.269531 199.046875 56.269531 Z M 199.046875 56.269531 " clip-rule="nonzero"/></clipPath><clipPath id="56b8a888be"><path d="M 0.753906 0.269531 L 11.335938 0.269531 L 11.335938 10.855469 L 0.753906 10.855469 Z M 0.753906 0.269531 " clip-rule="nonzero"/></clipPath><clipPath id="ced81f420d"><path d="M 6.046875 0.269531 C 3.121094 0.269531 0.753906 2.640625 0.753906 5.5625 C 0.753906 8.484375 3.121094 10.855469 6.046875 10.855469 C 8.96875 10.855469 11.335938 8.484375 11.335938 5.5625 C 11.335938 2.640625 8.96875 0.269531 6.046875 0.269531 Z M 6.046875 0.269531 " clip-rule="nonzero"/></clipPath><clipPath id="d2eed9ebbc"><rect x="0" width="12" y="0" height="11"/></clipPath></defs><g transform="matrix(1, 0, 0, 1, 47, 59)"><g clip-path="url(#c947c2f258)"><g fill="currentColor"><g transform="translate(4.497476, 21.421828)"><g><path d="M 12.59375 -11.0625 L 3.34375 -11.0625 L 3.34375 -7.609375 C 4.175781 -8.523438 4.945312 -9.113281 5.65625 -9.375 C 6.050781 -9.519531 6.5 -9.59375 7 -9.59375 C 8.863281 -9.59375 10.257812 -8.671875 11.1875 -6.828125 C 11.582031 -6.023438 11.78125 -5.234375 11.78125 -4.453125 C 11.78125 -3.035156 11.195312 -1.753906 10.03125 -0.609375 C 9.644531 -0.222656 9.351562 0.0390625 9.15625 0.1875 L 7.28125 -0.9375 C 7.757812 -1.4375 8.296875 -2.050781 8.890625 -2.78125 C 9.578125 -3.59375 9.925781 -4.625 9.9375 -5.875 C 9.9375 -6.613281 9.765625 -7.234375 9.421875 -7.734375 C 9.035156 -8.304688 8.488281 -8.585938 7.78125 -8.578125 C 7.113281 -8.554688 6.410156 -8.304688 5.671875 -7.828125 C 4.992188 -7.398438 4.429688 -6.890625 3.984375 -6.296875 C 3.503906 -5.648438 3.265625 -5.03125 3.265625 -4.4375 L 3.265625 0.109375 L 1.125 -1.03125 L 1.125 -11.0625 L -0.140625 -11.0625 L -0.140625 -12.4375 L 1.125 -12.4375 C 1.125 -14.6875 0.539062 -16.609375 -0.625 -18.203125 C -1.332031 -19.148438 -1.984375 -19.820312 -2.578125 -20.21875 L -0.265625 -20.234375 C 1.015625 -19.535156 2.035156 -18.019531 2.796875 -15.6875 C 3.160156 -14.582031 3.34375 -13.5 3.34375 -12.4375 L 12.59375 -12.4375 Z M 12.59375 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(16.964861, 21.421828)"><g><path d="M 11.203125 -11.0625 L 3.5625 -11.0625 L 3.5625 -9.234375 C 3.59375 -9.234375 3.625 -9.21875 3.65625 -9.1875 C 3.6875 -9.15625 3.710938 -9.140625 3.734375 -9.140625 C 3.671875 -9.140625 3.640625 -9.144531 3.640625 -9.15625 C 3.640625 -9.1875 4.207031 -9.304688 5.34375 -9.515625 C 5.757812 -9.585938 6.175781 -9.625 6.59375 -9.625 C 8.3125 -9.625 9.414062 -9.144531 9.90625 -8.1875 C 10.238281 -7.539062 10.40625 -6.242188 10.40625 -4.296875 L 10.40625 0.109375 C 10.238281 0.046875 9.628906 -0.195312 8.578125 -0.625 C 8.578125 -0.875 8.523438 -1.03125 8.421875 -1.09375 C 8.023438 -0.863281 7.695312 -0.6875 7.4375 -0.5625 C 6.601562 -0.175781 5.640625 0.015625 4.546875 0.015625 C 3.046875 0.015625 1.882812 -0.457031 1.0625 -1.40625 C 0.664062 -1.863281 0.46875 -2.375 0.46875 -2.9375 C 0.46875 -3.570312 0.78125 -4.203125 1.40625 -4.828125 C 2.625 -6.046875 4.132812 -6.65625 5.9375 -6.65625 C 7.03125 -6.65625 7.910156 -6.398438 8.578125 -5.890625 L 8.578125 -6.953125 C 8.242188 -7.378906 7.914062 -7.664062 7.59375 -7.8125 C 7.28125 -7.957031 6.847656 -8.019531 6.296875 -8 C 5.066406 -7.976562 3.9375 -7.753906 2.90625 -7.328125 C 2.445312 -7.140625 2.003906 -6.96875 1.578125 -6.8125 L 1.578125 -7.65625 C 1.671875 -7.738281 1.8125 -7.863281 2 -8.03125 C 2.03125 -8.070312 2.050781 -8.097656 2.0625 -8.109375 L 2.0625 -11.0625 L -0.28125 -11.0625 L -0.28125 -12.4375 L 11.203125 -12.4375 Z M 8.578125 -3.8125 C 8.578125 -4.144531 8.175781 -4.445312 7.375 -4.71875 C 6.707031 -4.9375 6.148438 -5.046875 5.703125 -5.046875 C 4.097656 -5.046875 2.804688 -4.460938 1.828125 -3.296875 C 1.441406 -2.835938 1.25 -2.457031 1.25 -2.15625 C 1.40625 -1.59375 2.035156 -1.3125 3.140625 -1.3125 C 4.566406 -1.3125 5.867188 -1.671875 7.046875 -2.390625 C 8.066406 -3.003906 8.578125 -3.476562 8.578125 -3.8125 Z M 8.578125 -3.8125 "/></g></g></g><g fill="currentColor"><g transform="translate(28.124719, 21.421828)"><g><path d="M 11.65625 -11.0625 L 10.40625 -11.0625 L 10.40625 -6.71875 C 9.945312 -6.988281 9.296875 -7.21875 8.453125 -7.40625 C 7.660156 -7.59375 6.972656 -7.6875 6.390625 -7.6875 C 4.984375 -7.6875 3.804688 -7.4375 2.859375 -6.9375 C 2.328125 -6.65625 2.0625 -6.285156 2.0625 -5.828125 C 2.0625 -5.210938 2.382812 -4.90625 3.03125 -4.90625 C 3.414062 -4.90625 3.921875 -5.019531 4.546875 -5.25 C 4.953125 -5.394531 5.472656 -5.578125 6.109375 -5.796875 C 6.378906 -5.890625 6.851562 -5.9375 7.53125 -5.9375 C 8.851562 -5.9375 9.84375 -5.53125 10.5 -4.71875 C 10.8125 -4.320312 10.96875 -3.863281 10.96875 -3.34375 C 10.96875 -2.125 10.203125 -1.164062 8.671875 -0.46875 C 8.035156 -0.175781 7.429688 -0.015625 6.859375 0.015625 C 7.410156 0.566406 7.929688 0.84375 8.421875 0.84375 C 8.585938 0.84375 8.757812 0.820312 8.9375 0.78125 L 10.109375 2.671875 C 9.867188 2.878906 9.378906 2.984375 8.640625 2.984375 C 8.046875 2.984375 7.539062 2.78125 7.125 2.375 C 6.90625 2.15625 6.59375 1.691406 6.1875 0.984375 C 5.84375 0.378906 5.554688 0.0703125 5.328125 0.0625 C 3.910156 0.03125 2.820312 -0.222656 2.0625 -0.703125 C 1.582031 -0.992188 1.34375 -1.398438 1.34375 -1.921875 C 1.34375 -2.566406 1.722656 -2.890625 2.484375 -2.890625 C 2.765625 -2.890625 3.351562 -2.671875 4.25 -2.234375 C 5.15625 -1.796875 5.898438 -1.578125 6.484375 -1.578125 C 7.640625 -1.578125 8.726562 -1.847656 9.75 -2.390625 C 10.25 -2.660156 10.5 -2.988281 10.5 -3.375 C 10.5 -3.957031 10.035156 -4.25 9.109375 -4.25 C 8.828125 -4.25 7.914062 -4.046875 6.375 -3.640625 C 5.46875 -3.390625 4.910156 -3.265625 4.703125 -3.265625 C 3.484375 -3.265625 2.484375 -3.835938 1.703125 -4.984375 C 1.316406 -5.535156 1.125 -6.128906 1.125 -6.765625 C 1.113281 -8.054688 1.992188 -8.925781 3.765625 -9.375 C 4.492188 -9.5625 5.179688 -9.65625 5.828125 -9.65625 C 6.554688 -9.65625 7.59375 -9.472656 8.9375 -9.109375 L 8.9375 -11.0625 L -0.1875 -11.0625 L -0.1875 -12.4375 L 11.65625 -12.4375 Z M 11.65625 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(39.663072, 21.421828)"><g><path d="M 12.59375 -11.0625 L 3.34375 -11.0625 L 3.34375 -7.609375 C 4.175781 -8.523438 4.945312 -9.113281 5.65625 -9.375 C 6.050781 -9.519531 6.5 -9.59375 7 -9.59375 C 8.863281 -9.59375 10.257812 -8.671875 11.1875 -6.828125 C 11.582031 -6.023438 11.78125 -5.234375 11.78125 -4.453125 C 11.78125 -3.035156 11.195312 -1.753906 10.03125 -0.609375 C 9.644531 -0.222656 9.351562 0.0390625 9.15625 0.1875 L 7.28125 -0.9375 C 7.757812 -1.4375 8.296875 -2.050781 8.890625 -2.78125 C 9.578125 -3.59375 9.925781 -4.625 9.9375 -5.875 C 9.9375 -6.613281 9.765625 -7.234375 9.421875 -7.734375 C 9.035156 -8.304688 8.488281 -8.585938 7.78125 -8.578125 C 7.113281 -8.554688 6.410156 -8.304688 5.671875 -7.828125 C 4.992188 -7.398438 4.429688 -6.890625 3.984375 -6.296875 C 3.503906 -5.648438 3.265625 -5.03125 3.265625 -4.4375 L 3.265625 0.109375 L 1.125 -1.03125 L 1.125 -11.0625 L -0.140625 -11.0625 L -0.140625 -12.4375 L 1.125 -12.4375 C 1.125 -14.6875 0.539062 -16.609375 -0.625 -18.203125 C -1.332031 -19.148438 -1.984375 -19.820312 -2.578125 -20.21875 L -0.265625 -20.234375 C 1.015625 -19.535156 2.035156 -18.019531 2.796875 -15.6875 C 3.160156 -14.582031 3.34375 -13.5 3.34375 -12.4375 L 12.59375 -12.4375 Z M 12.59375 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(52.130457, 21.421828)"><g><path d="M 10.140625 -11.0625 L 4.34375 -11.0625 L 4.34375 -1.828125 C 4.34375 -1.566406 4.425781 -1.316406 4.59375 -1.078125 C 4.769531 -0.804688 4.984375 -0.671875 5.234375 -0.671875 C 6.378906 -0.671875 6.953125 -1.847656 6.953125 -4.203125 L 9.25 -2.890625 C 8.375 -0.941406 7.015625 0.0234375 5.171875 0.015625 C 4.097656 0.015625 3.265625 -0.46875 2.671875 -1.4375 C 2.410156 -1.863281 2.28125 -2.285156 2.28125 -2.703125 L 2.28125 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 2.28125 -12.4375 L 2.28125 -16.296875 L 4.34375 -14.859375 L 4.34375 -12.4375 L 10.140625 -12.4375 Z M 10.140625 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(62.131892, 21.421828)"><g><path d="M 11.203125 -11.0625 L 3.5625 -11.0625 L 3.5625 -9.234375 C 3.59375 -9.234375 3.625 -9.21875 3.65625 -9.1875 C 3.6875 -9.15625 3.710938 -9.140625 3.734375 -9.140625 C 3.671875 -9.140625 3.640625 -9.144531 3.640625 -9.15625 C 3.640625 -9.1875 4.207031 -9.304688 5.34375 -9.515625 C 5.757812 -9.585938 6.175781 -9.625 6.59375 -9.625 C 8.3125 -9.625 9.414062 -9.144531 9.90625 -8.1875 C 10.238281 -7.539062 10.40625 -6.242188 10.40625 -4.296875 L 10.40625 0.109375 C 10.238281 0.046875 9.628906 -0.195312 8.578125 -0.625 C 8.578125 -0.875 8.523438 -1.03125 8.421875 -1.09375 C 8.023438 -0.863281 7.695312 -0.6875 7.4375 -0.5625 C 6.601562 -0.175781 5.640625 0.015625 4.546875 0.015625 C 3.046875 0.015625 1.882812 -0.457031 1.0625 -1.40625 C 0.664062 -1.863281 0.46875 -2.375 0.46875 -2.9375 C 0.46875 -3.570312 0.78125 -4.203125 1.40625 -4.828125 C 2.625 -6.046875 4.132812 -6.65625 5.9375 -6.65625 C 7.03125 -6.65625 7.910156 -6.398438 8.578125 -5.890625 L 8.578125 -6.953125 C 8.242188 -7.378906 7.914062 -7.664062 7.59375 -7.8125 C 7.28125 -7.957031 6.847656 -8.019531 6.296875 -8 C 5.066406 -7.976562 3.9375 -7.753906 2.90625 -7.328125 C 2.445312 -7.140625 2.003906 -6.96875 1.578125 -6.8125 L 1.578125 -7.65625 C 1.671875 -7.738281 1.8125 -7.863281 2 -8.03125 C 2.03125 -8.070312 2.050781 -8.097656 2.0625 -8.109375 L 2.0625 -11.0625 L -0.28125 -11.0625 L -0.28125 -12.4375 L 11.203125 -12.4375 Z M 8.578125 -3.8125 C 8.578125 -4.144531 8.175781 -4.445312 7.375 -4.71875 C 6.707031 -4.9375 6.148438 -5.046875 5.703125 -5.046875 C 4.097656 -5.046875 2.804688 -4.460938 1.828125 -3.296875 C 1.441406 -2.835938 1.25 -2.457031 1.25 -2.15625 C 1.40625 -1.59375 2.035156 -1.3125 3.140625 -1.3125 C 4.566406 -1.3125 5.867188 -1.671875 7.046875 -2.390625 C 8.066406 -3.003906 8.578125 -3.476562 8.578125 -3.8125 Z M 8.578125 -3.8125 "/></g></g></g><g fill="currentColor"><g transform="translate(73.29175, 21.421828)"><g><path d="M 11.921875 1.859375 C 11.921875 3.273438 11.234375 3.984375 9.859375 3.984375 C 9.242188 3.984375 8.359375 3.695312 7.203125 3.125 C 5.921875 2.476562 4.84375 2.15625 3.96875 2.15625 C 2.09375 2.15625 0.328125 2.894531 -1.328125 4.375 C -2.117188 5.082031 -2.742188 5.914062 -3.203125 6.875 C -3.234375 6.757812 -3.25 6.566406 -3.25 6.296875 C -3.25 5.378906 -2.972656 4.46875 -2.421875 3.5625 C -1.910156 2.71875 -1.253906 2.007812 -0.453125 1.4375 C 0.441406 0.8125 1.46875 0.5 2.625 0.5 C 3.414062 0.5 4.109375 0.628906 4.703125 0.890625 C 5.015625 1.035156 5.617188 1.410156 6.515625 2.015625 C 7.273438 2.535156 7.859375 2.796875 8.265625 2.796875 C 9.273438 2.796875 10.078125 2.378906 10.671875 1.546875 C 10.929688 1.191406 11.0625 0.84375 11.0625 0.5 C 11.0625 -0.101562 10.878906 -0.609375 10.515625 -1.015625 C 10.148438 -1.429688 9.671875 -1.640625 9.078125 -1.640625 C 8.523438 -1.640625 7.613281 -1.363281 6.34375 -0.8125 C 5.082031 -0.257812 4.179688 0.015625 3.640625 0.015625 C 3.234375 0.015625 2.742188 -0.179688 2.171875 -0.578125 C 0.972656 -1.429688 0.375 -2.222656 0.375 -2.953125 C 0.375 -3.359375 0.601562 -3.734375 1.0625 -4.078125 C 1.457031 -4.390625 1.875 -4.5625 2.3125 -4.59375 L 2.328125 -4.71875 L 1.765625 -5.515625 C 1.453125 -5.960938 1.296875 -6.441406 1.296875 -6.953125 C 1.296875 -8.710938 2.734375 -9.59375 5.609375 -9.59375 C 5.691406 -9.601562 5.75 -9.671875 5.78125 -9.796875 L 5.78125 -11.0625 L -0.15625 -11.0625 L -0.15625 -12.4375 L 11.625 -12.4375 L 11.625 -11.0625 L 7.5625 -11.0625 L 7.5625 -9.140625 C 7.5625 -8.773438 7.660156 -8.550781 7.859375 -8.46875 C 7.992188 -8.46875 8.160156 -8.585938 8.359375 -8.828125 L 8.796875 -9.359375 C 8.910156 -9.472656 9.117188 -9.550781 9.421875 -9.59375 C 9.898438 -9.59375 10.359375 -9.316406 10.796875 -8.765625 C 10.992188 -8.503906 11.125 -8.25 11.1875 -8 L 9.96875 -6.625 C 9.957031 -6.976562 9.890625 -7.300781 9.765625 -7.59375 C 9.585938 -7.976562 9.359375 -8.171875 9.078125 -8.171875 C 8.960938 -8.171875 8.832031 -8.117188 8.6875 -8.015625 C 8.539062 -7.921875 8.46875 -7.828125 8.46875 -7.734375 C 8.46875 -7.617188 8.519531 -7.476562 8.625 -7.3125 C 8.738281 -7.125 8.800781 -7.003906 8.8125 -6.953125 C 8.863281 -6.785156 8.890625 -6.566406 8.890625 -6.296875 C 8.890625 -5.265625 8.472656 -4.566406 7.640625 -4.203125 C 7.078125 -3.953125 6.195312 -3.828125 5 -3.828125 C 3.46875 -3.828125 2.425781 -3.488281 1.875 -2.8125 C 1.644531 -2.539062 1.535156 -2.320312 1.546875 -2.15625 C 1.554688 -1.925781 1.671875 -1.722656 1.890625 -1.546875 C 2.109375 -1.378906 2.335938 -1.296875 2.578125 -1.296875 C 3.015625 -1.296875 3.851562 -1.597656 5.09375 -2.203125 C 6.550781 -2.910156 7.726562 -3.273438 8.625 -3.296875 C 9.4375 -3.304688 10.125 -2.941406 10.6875 -2.203125 C 11.132812 -1.609375 11.457031 -0.859375 11.65625 0.046875 C 11.832031 0.847656 11.921875 1.453125 11.921875 1.859375 Z M 7.46875 -7.34375 C 7.46875 -8.269531 6.972656 -8.734375 5.984375 -8.734375 C 5.191406 -8.734375 4.441406 -8.457031 3.734375 -7.90625 C 2.960938 -7.300781 2.578125 -6.613281 2.578125 -5.84375 C 2.578125 -5.425781 2.738281 -5.066406 3.0625 -4.765625 C 3.394531 -4.472656 3.769531 -4.328125 4.1875 -4.328125 C 4.625 -4.316406 5.117188 -4.472656 5.671875 -4.796875 C 6.160156 -5.078125 6.5625 -5.40625 6.875 -5.78125 C 7.269531 -6.238281 7.46875 -6.757812 7.46875 -7.34375 Z M 7.46875 -7.34375 "/></g></g></g><g fill="currentColor"><g transform="translate(84.726877, 21.421828)"><g/></g></g><g fill="currentColor"><g transform="translate(91.035122, 21.421828)"><g><path d="M 12.84375 -11.0625 L 3.25 -11.0625 L 3.25 -3.71875 C 3.25 -3.226562 3.351562 -2.722656 3.5625 -2.203125 C 3.976562 -1.140625 4.671875 -0.609375 5.640625 -0.609375 C 6.953125 -0.609375 7.945312 -1.15625 8.625 -2.25 C 9.15625 -3.09375 9.421875 -3.882812 9.421875 -4.625 L 9.421875 -9.1875 L 11.75 -9.1875 L 11.75 0.578125 C 11.5625 0.472656 11.210938 0.3125 10.703125 0.09375 L 9.390625 -0.5 L 9.390625 -1.40625 C 8.484375 -0.75 7.710938 -0.332031 7.078125 -0.15625 C 6.679688 -0.0507812 6.21875 0 5.6875 0 C 3.988281 0 2.660156 -0.742188 1.703125 -2.234375 C 1.273438 -2.910156 1.0625 -3.648438 1.0625 -4.453125 L 1.0625 -11.0625 L -0.328125 -11.0625 L -0.328125 -12.4375 L 12.84375 -12.4375 Z M 12.84375 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(103.789245, 21.421828)"><g><path d="M 12.21875 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 12.21875 -12.4375 Z M 9.75 -6.03125 C 9.75 -7.863281 8.878906 -8.78125 7.140625 -8.78125 C 5.859375 -8.78125 4.785156 -8.109375 3.921875 -6.765625 C 3.160156 -5.578125 2.78125 -4.304688 2.78125 -2.953125 L 2.78125 0.375 L 0.890625 -0.609375 L 0.890625 -9.234375 L 2.859375 -9.234375 L 2.859375 -7.859375 L 3.890625 -8.640625 C 4.785156 -9.316406 5.738281 -9.65625 6.75 -9.65625 C 8.101562 -9.65625 9.226562 -9.128906 10.125 -8.078125 C 10.96875 -7.078125 11.390625 -5.882812 11.390625 -4.5 C 11.390625 -2.769531 10.65625 -1.101562 9.1875 0.5 L 6.96875 -0.890625 C 7.65625 -1.578125 8.238281 -2.207031 8.71875 -2.78125 C 9.40625 -3.582031 9.75 -4.664062 9.75 -6.03125 Z M 9.75 -6.03125 "/></g></g></g><g fill="currentColor"><g transform="translate(115.820788, 21.421828)"><g><path d="M 12.21875 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 12.21875 -12.4375 Z M 9.75 -6.03125 C 9.75 -7.863281 8.878906 -8.78125 7.140625 -8.78125 C 5.859375 -8.78125 4.785156 -8.109375 3.921875 -6.765625 C 3.160156 -5.578125 2.78125 -4.304688 2.78125 -2.953125 L 2.78125 0.375 L 0.890625 -0.609375 L 0.890625 -9.234375 L 2.859375 -9.234375 L 2.859375 -7.859375 L 3.890625 -8.640625 C 4.785156 -9.316406 5.738281 -9.65625 6.75 -9.65625 C 8.101562 -9.65625 9.226562 -9.128906 10.125 -8.078125 C 10.96875 -7.078125 11.390625 -5.882812 11.390625 -4.5 C 11.390625 -2.769531 10.65625 -1.101562 9.1875 0.5 L 6.96875 -0.890625 C 7.65625 -1.578125 8.238281 -2.207031 8.71875 -2.78125 C 9.40625 -3.582031 9.75 -4.664062 9.75 -6.03125 Z M 9.75 -6.03125 "/></g></g></g><g fill="currentColor"><g transform="translate(127.852331, 21.421828)"><g><path d="M 11.203125 -11.0625 L 3.5625 -11.0625 L 3.5625 -9.234375 C 3.59375 -9.234375 3.625 -9.21875 3.65625 -9.1875 C 3.6875 -9.15625 3.710938 -9.140625 3.734375 -9.140625 C 3.671875 -9.140625 3.640625 -9.144531 3.640625 -9.15625 C 3.640625 -9.1875 4.207031 -9.304688 5.34375 -9.515625 C 5.757812 -9.585938 6.175781 -9.625 6.59375 -9.625 C 8.3125 -9.625 9.414062 -9.144531 9.90625 -8.1875 C 10.238281 -7.539062 10.40625 -6.242188 10.40625 -4.296875 L 10.40625 0.109375 C 10.238281 0.046875 9.628906 -0.195312 8.578125 -0.625 C 8.578125 -0.875 8.523438 -1.03125 8.421875 -1.09375 C 8.023438 -0.863281 7.695312 -0.6875 7.4375 -0.5625 C 6.601562 -0.175781 5.640625 0.015625 4.546875 0.015625 C 3.046875 0.015625 1.882812 -0.457031 1.0625 -1.40625 C 0.664062 -1.863281 0.46875 -2.375 0.46875 -2.9375 C 0.46875 -3.570312 0.78125 -4.203125 1.40625 -4.828125 C 2.625 -6.046875 4.132812 -6.65625 5.9375 -6.65625 C 7.03125 -6.65625 7.910156 -6.398438 8.578125 -5.890625 L 8.578125 -6.953125 C 8.242188 -7.378906 7.914062 -7.664062 7.59375 -7.8125 C 7.28125 -7.957031 6.847656 -8.019531 6.296875 -8 C 5.066406 -7.976562 3.9375 -7.753906 2.90625 -7.328125 C 2.445312 -7.140625 2.003906 -6.96875 1.578125 -6.8125 L 1.578125 -7.65625 C 1.671875 -7.738281 1.8125 -7.863281 2 -8.03125 C 2.03125 -8.070312 2.050781 -8.097656 2.0625 -8.109375 L 2.0625 -11.0625 L -0.28125 -11.0625 L -0.28125 -12.4375 L 11.203125 -12.4375 Z M 8.578125 -3.8125 C 8.578125 -4.144531 8.175781 -4.445312 7.375 -4.71875 C 6.707031 -4.9375 6.148438 -5.046875 5.703125 -5.046875 C 4.097656 -5.046875 2.804688 -4.460938 1.828125 -3.296875 C 1.441406 -2.835938 1.25 -2.457031 1.25 -2.15625 C 1.40625 -1.59375 2.035156 -1.3125 3.140625 -1.3125 C 4.566406 -1.3125 5.867188 -1.671875 7.046875 -2.390625 C 8.066406 -3.003906 8.578125 -3.476562 8.578125 -3.8125 Z M 8.578125 -3.8125 "/></g></g></g><g fill="currentColor"><g transform="translate(139.012189, 21.421828)"><g><path d="M 10.140625 -11.0625 L 4.34375 -11.0625 L 4.34375 -1.828125 C 4.34375 -1.566406 4.425781 -1.316406 4.59375 -1.078125 C 4.769531 -0.804688 4.984375 -0.671875 5.234375 -0.671875 C 6.378906 -0.671875 6.953125 -1.847656 6.953125 -4.203125 L 9.25 -2.890625 C 8.375 -0.941406 7.015625 0.0234375 5.171875 0.015625 C 4.097656 0.015625 3.265625 -0.46875 2.671875 -1.4375 C 2.410156 -1.863281 2.28125 -2.285156 2.28125 -2.703125 L 2.28125 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 2.28125 -12.4375 L 2.28125 -16.296875 L 4.34375 -14.859375 L 4.34375 -12.4375 L 10.140625 -12.4375 Z M 10.140625 -11.0625 "/></g></g></g><g fill="currentColor"><g transform="translate(149.013624, 21.421828)"><g><path d="M 3.875 -13.640625 C 3.84375 -13.609375 3.753906 -13.59375 3.609375 -13.59375 C 3.484375 -13.59375 3.378906 -13.609375 3.296875 -13.640625 L 2.546875 -15.171875 C 2.242188 -15.648438 1.828125 -15.972656 1.296875 -16.140625 C 0.773438 -16.316406 0.453125 -16.507812 0.328125 -16.71875 C 0.210938 -17.070312 -0.00390625 -17.609375 -0.328125 -18.328125 L -0.328125 -18.59375 L 0.109375 -18.59375 C 0.703125 -18.414062 1.179688 -18.242188 1.546875 -18.078125 C 2.148438 -17.816406 2.554688 -17.507812 2.765625 -17.15625 C 2.878906 -16.96875 3.054688 -16.476562 3.296875 -15.6875 C 3.515625 -14.945312 3.703125 -14.429688 3.859375 -14.140625 C 3.867188 -14.003906 3.875 -13.835938 3.875 -13.640625 Z M 4.546875 -11.0625 L -0.109375 -11.0625 L -0.109375 -12.4375 L 4.546875 -12.4375 Z M 3.25 0.265625 L 1.3125 -0.796875 L 1.3125 -9.65625 L 3.25 -9.65625 Z M 3.25 0.265625 "/></g></g></g></g></g><g clip-path="url(#9c495101b9)"><g clip-path="url(#18dbc91974)"><g transform="matrix(1, 0, 0, 1, 193, 56)"><g clip-path="url(#d2eed9ebbc)"><g clip-path="url(#56b8a888be)"><g clip-path="url(#ced81f420d)"><path fill="#E2610A" d="M 0.753906 0.269531 L 11.335938 0.269531 L 11.335938 10.855469 L 0.753906 10.855469 Z M 0.753906 0.269531 " fill-opacity="1" fill-rule="nonzero"/></g></g></g></g></g></g></svg>
+  </div>
+  <div class="footer-links">
+    <span class="footer-link">Privacy Policy</span>
+    <span class="footer-link">Terms of Service</span>
+  </div>
+  <div class="footer-copy">© 2026 Alumnik India Private Limited</div>
+</footer>
+
+<div class="toast-container" id="tc"></div>
+
+<script>
+/* ─── Theme ─── */
+const root = document.documentElement;
+const pref = window.matchMedia('(prefers-color-scheme: dark)');
+let forceDark = true; // default: dark mode
+
+const DARK_CSS  = `:root{--bg:#0E0E0D;--bg-2:#141412;--bg-card:#1A1A18;--bg-card-2:#141412;--ink:#F0EDE6;--ink-2:#C8C4BC;--muted:#888;--muted-2:#555;--border:rgba(255,255,255,0.09);--border-2:rgba(255,255,255,0.05);--saffron:#F07D2E;--saffron-2:#E2610A;--saffron-pale:rgba(226,97,10,0.12);--forest-pale:rgba(27,61,43,0.25);--forest-bright:#4CAF50;--nav-bg:rgba(14,14,13,0.94);--nav-border:rgba(255,255,255,0.07);--input-bg:rgba(255,255,255,0.06);--input-border:rgba(255,255,255,0.12);--input-color:#F0EDE6;--logo-color:#F0EDE6;--shadow-sm:0 1px 6px rgba(0,0,0,0.3);--shadow-md:0 4px 24px rgba(0,0,0,0.4);--shadow-lg:0 12px 48px rgba(0,0,0,0.5);--hero-bg:#0E0E0D;--hero-text:#F0EDE6;--hero-muted:#777;--ticker-bg:rgba(226,97,10,0.07);--ticker-border:rgba(226,97,10,0.15);--proof-bg:#1A1A18;--proof-border:rgba(255,255,255,0.07);--counter-bg:#1A1A18;--counter-border:rgba(226,97,10,0.3);--stat-bg:rgba(255,255,255,0.04);--footer-bg:#070706;}`;
+const LIGHT_CSS = `:root{--bg:#F6F2EB;--bg-2:#EDE8DF;--bg-card:#FFFFFF;--bg-card-2:#F9F6F1;--ink:#0E0E0D;--ink-2:#3A3A38;--muted:#7A746A;--muted-2:#A09890;--border:rgba(0,0,0,0.1);--border-2:rgba(0,0,0,0.06);--saffron:#E2610A;--saffron-2:#F07D2E;--saffron-pale:#FBE9D9;--forest-pale:#D6EAD9;--forest-bright:#2E7D47;--nav-bg:rgba(246,242,235,0.92);--nav-border:rgba(0,0,0,0.08);--input-bg:#FFFFFF;--input-border:rgba(0,0,0,0.15);--input-color:#0E0E0D;--logo-color:#0E0E0D;--shadow-sm:0 1px 6px rgba(0,0,0,0.07);--shadow-md:0 4px 20px rgba(0,0,0,0.1);--shadow-lg:0 12px 48px rgba(0,0,0,0.13);--hero-bg:#0E0E0D;--hero-text:#F6F2EB;--hero-muted:#888;--ticker-bg:rgba(226,97,10,0.07);--ticker-border:rgba(226,97,10,0.18);--proof-bg:#FFFFFF;--proof-border:rgba(0,0,0,0.08);--counter-bg:#FFFFFF;--counter-border:rgba(226,97,10,0.25);--stat-bg:rgba(0,0,0,0.03);--footer-bg:#0E0E0D;}`;
+
+function applyTheme(){
+  const dark = forceDark !== null ? forceDark : pref.matches;
+  // Inject CSS override every time — this is the single source of truth
+  let el = document.getElementById('theme-override');
+  if(!el){ el = document.createElement('style'); el.id = 'theme-override'; document.head.appendChild(el); }
+  el.textContent = dark ? DARK_CSS : LIGHT_CSS;
+  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+}
+function toggleTheme(){
+  forceDark = !(forceDark !== null ? forceDark : pref.matches);
+  applyTheme();
+}
+pref.addEventListener('change', applyTheme);
+applyTheme(); // runs immediately on load — injects dark CSS right away
+
+/* ─── Waitlist tabs ─── */
+function setTab(t){
+  document.getElementById('tab-brand').className='wtab'+(t==='brand'?' brand-active':'');
+  document.getElementById('tab-ngo').className  ='wtab'+(t==='ngo'  ?'   ngo-active':'');
+  ['brand','ngo'].forEach(x=>{
+    document.getElementById('form-'+x).classList.toggle('show',x===t);
+    document.getElementById('succ-'+x).style.display='none';
+  });
+}
+
+/* ─── Submit ─── */
+const WAITLIST_ENDPOINT = 'https://script.google.com/macros/s/AKfycby48Nod1THzAzCFL0u-iG6u2I3g_C9nSdEduoTv3JsxkUGXnlVYntgXT3-XjImwTSikUQ/exec';
+let bc=247, nc=60;
+
+async function submitForm(t){
+  const name  = document.getElementById(t==='brand'?'b-name':'n-name').value.trim();
+  const email = document.getElementById(t==='brand'?'b-email':'n-email').value.trim();
+  const org   = document.getElementById(t==='brand'?'b-company':'n-org').value.trim();
+  const button = document.querySelector('#form-'+t+' button');
+  const originalText = button.textContent;
+
+  if(!name){ toast('Please enter your name',''); return; }
+  if(!org){  toast('Please enter your organisation',''); return; }
+  if(!isValidEmail(email)){ toast('Please enter a valid email address',''); return; }
+
+  button.disabled = true;
+  button.textContent = 'Joining...';
+
+  try {
+    await postWaitlist({
+      type: t,
+      name,
+      org,
+      email,
+      industry: t==='brand' ? document.getElementById('b-industry').value : '',
+      budget: t==='brand' ? document.getElementById('b-budget').value : '',
+      cause: t==='ngo' ? document.getElementById('n-cause').value : '',
+      geography: t==='ngo' ? document.getElementById('n-geo').value : '',
+      pageUrl: window.location.href,
+      userAgent: navigator.userAgent
+    });
+
+    if(t==='brand'){ bc++; document.getElementById('b-pos').textContent='#'+bc; }
+    else            { nc++; document.getElementById('n-pos').textContent='#'+nc; }
+    document.getElementById('form-'+t).classList.remove('show');
+    document.getElementById('succ-'+t).style.display='block';
+    updateCounter();
+    toast(t==='brand'?"You're on the list!":"Welcome aboard!", 'ok');
+    button.disabled = false;
+    button.textContent = originalText;
+  } catch (err) {
+    button.disabled = false;
+    button.textContent = originalText;
+    toast('Something went wrong. Please try again.','');
+  }
+}
+async function postWaitlist(payload){
+  await fetch(WAITLIST_ENDPOINT, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  });
+}
+function isValidEmail(email){
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+function updateCounter(){
+  const n=bc+nc;
+  document.getElementById('c-num').textContent=n;
+  document.getElementById('nav-num').textContent=n;
+  document.getElementById('c-bar').style.width=Math.min((n/500)*100,100)+'%';
+  document.getElementById('c-sub').innerHTML=n+' of 500 early access spots · <strong style="color:var(--saffron);">'+(500-n)+' remaining</strong>';
+}
+function scrollToWaitlist(){
+  document.getElementById('waitlist').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+/* ─── Counter bar on scroll ─── */
+const obs=new IntersectionObserver(e=>{
+  if(e[0].isIntersecting) document.getElementById('c-bar').style.width=Math.min(((bc+nc)/500)*100,100)+'%';
+},{threshold:0.3});
+obs.observe(document.getElementById('counter'));
+
+/* ─── Toast ─── */
+function toast(m,t=''){
+  const c=document.getElementById('tc');
+  const el=document.createElement('div');
+  el.className='toast '+(t==='ok'?'ok':'');
+  el.textContent=m; c.appendChild(el);
+  requestAnimationFrame(()=>el.classList.add('show'));
+  setTimeout(()=>{el.classList.remove('show');setTimeout(()=>el.remove(),400);},4000);
+}
+</script>
+</body>
+</html>
